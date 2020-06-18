@@ -1,3 +1,14 @@
+.header-fix
+	.container
+		.header-fix-content
+			a(href="index.html").logo
+				+logo
+			nav
+				a(href="#") Главная
+				a(href="#") О нас
+				a(href="#") Портфолио
+				a(href="#") Блог
+				a(href="#") Контакты
 
 header.header
 	.container-fluid
@@ -20,11 +31,13 @@ header.header
 		.header-content
 			.header-text
 				h1.title-1 Продаем <br> готовые сайты <br>"под ключ"
-				a(href="#").btn Смотреть от 6000 руб.
+				a(href="#!").btn.btn-icon Смотреть от 6000 руб.
 					i.fas.fa-caret-right
 			.row
 				.col-xl-6.offset-xl-6
 					.header-image
+						.parallax-item
+							img(src="img/layout1.png", alt="img")
 						img(src="img/main.png", alt="img")
 	
 	//МОДАЛЬНОЕ ОКНО ПОИСКА

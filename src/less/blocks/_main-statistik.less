@@ -2,6 +2,23 @@
 .statistik {
 	padding-top: 160px;
 	padding-bottom: 140px;
+	overflow: hidden;
+
+	@media(max-width:767px) {
+		padding-top: 130px;
+		padding-bottom: 130px;
+
+	}
+
+	@media(max-width:579px) {
+		.btn-box {
+			flex-direction: column;
+
+			a:first-child {
+				margin-bottom: 15px;
+			}
+		}
+	}
 
 	.block-img {
 		position: relative;
@@ -14,10 +31,53 @@
 			transform: rotate(180deg)
 		}
 
+		@media(max-width:991px) {
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media(max-width:767px) {
+			max-width: 450px;
+		}
+
+		@media(max-width:424px) {
+			transform: translateX(25px) scale(1.1);
+		}
+
 	}
 
 	.btn.btn--light {
 		margin-left: 2px;
+	}
+}
+
+.statistik-progress {
+	@media(max-width:991px) {
+		padding-top: 32px;
+	}
+
+	h2.title-2 {
+		@media(max-width:1799px) {
+			font-size: 48px;
+			line-height: 1.18;
+		}
+
+		@media(max-width:1439px) {
+			font-size: 44px;
+			line-height: 1.18;
+		}
+
+
+		@media(max-width:1364px) {
+			font-size: 38px;
+
+		}
+
+		@media(max-width:767px) {
+			font-size: 34px;
+
+		}
 	}
 }
 
@@ -33,12 +93,27 @@
 			font-weight: 700;
 			min-width: 55px;
 			margin-right: 18px;
+
+			@media(max-width:991px) {
+				min-width: 40px;
+			}
 		}
 
 		p:last-of-type {
 			width: 280px;
 			margin-right: 20px;
 			white-space: nowrap;
+
+			@media(max-width:991px) {
+				width: auto;
+				// }
+				// @media(max-width:579px) {
+				// 	width: auto;
+			}
+		}
+
+		.progress-text {
+			display: flex;
 		}
 
 		.progress-line {
@@ -60,5 +135,22 @@
 				transition: .8s;
 			}
 		}
+
+		@media(max-width:991px) {
+			font-size: 18px;
+		}
+
+		@media(max-width:579px) {
+			flex-direction: column;
+			align-items: flex-start;
+			font-size: 16px;
+
+			.progress-line {
+				width: 100%;
+				max-width: 500px;
+				margin-top: 10px;
+			}
+		}
+
 	}
 }

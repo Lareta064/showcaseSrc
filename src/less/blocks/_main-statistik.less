@@ -1,0 +1,64 @@
+/*-----СЕКЦИЯ СТАТИСТИКА-----*/
+.statistik {
+	padding-top: 160px;
+	padding-bottom: 140px;
+
+	.block-img {
+		position: relative;
+
+		.parallax-item {
+			position: absolute;
+			width: 42%;
+			left: -5%;
+			top: 15%;
+			transform: rotate(180deg)
+		}
+
+	}
+
+	.btn.btn--light {
+		margin-left: 2px;
+	}
+}
+
+.progress-block {
+	li {
+		display: flex;
+		font-size: 20px;
+		width: 100%;
+		align-items: center;
+		margin-bottom: 30px;
+
+		p:first-child {
+			font-weight: 700;
+			min-width: 55px;
+			margin-right: 18px;
+		}
+
+		p:last-of-type {
+			width: 280px;
+			margin-right: 20px;
+			white-space: nowrap;
+		}
+
+		.progress-line {
+			width: 330px;
+			height: 20px;
+			border-radius: 15px;
+			background-color: #f4f4f4;
+			position: relative;
+
+			span {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: 0%;
+				z-index: 1;
+				border-radius: 15px;
+				background-color: @colorBg;
+				transition: .8s;
+			}
+		}
+	}
+}

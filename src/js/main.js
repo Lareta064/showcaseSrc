@@ -1,4 +1,13 @@
 $(document).ready(function () {
+	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
+	window.addEventListener('scroll', function () {
+		const fixMenu = document.querySelector('.header-fix');
+		if (this.pageYOffset > 100) {
+			fixMenu.classList.add('active')
+		} else {
+			fixMenu.classList.remove('active')
+		}
+	})
 	// показать скрыть модальные окна поиска и моб меню
 	const openSearch = document.querySelector('#show-search');
 	const openMobMenu = document.querySelector('#mob-btn');

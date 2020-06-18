@@ -1,4 +1,73 @@
 /*-----HEADER-----*/
+.header-fix {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	box-shadow: 0 0 1.25rem rgba(0, 0, 0, .15);
+	background-color: #fff;
+	display: none;
+
+	.header-fix-content {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+
+			padding-top: 5px;
+
+			svg {
+				height: 60px;
+			}
+
+		}
+	}
+
+	nav {
+		display: flex;
+	}
+
+	nav a {
+		font-size: 17px;
+		font-weight: 700;
+
+		margin-right: 2em;
+		color: @text;
+		position: relative;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 3px;
+			height: 2px;
+			background-color: @colorBg;
+			width: 0;
+			.tr;
+		}
+
+		&:hover {
+			color: @colorBg;
+
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.header-fix.active {
+	display: block;
+}
+
 .header {
 	padding-top: 35px;
 	padding-bottom: 100px;

@@ -32,7 +32,9 @@ $(document).ready(function () {
 	closeMobMenu.addEventListener('click', function (e) {
 		mobMenu.classList.remove('active');
 	});
-
+	AOS.init({
+		disable: "mobile"
+	});
 	// ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ
 	let headerSection = document.querySelector('.header')
 	let bg = document.querySelectorAll('.parallax-item');

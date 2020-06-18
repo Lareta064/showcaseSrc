@@ -1,0 +1,189 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Rubik', sans-serif;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: @text;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+h1,
+h2,
+h3 {
+	padding: 0;
+	margin: 0;
+	font-weight: 700;
+	color: @title;
+	font-family: @rubik;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+
+button {
+	cursor: pointer;
+	border: 0px;
+	background-color: transparent;
+}
+
+button,
+input {
+	outline: none;
+}
+
+.title-2 {
+	font-size: 65px;
+	line-height: 75px;
+
+	@media(max-width:1364px) {
+		font-size: 48px;
+		line-height: 1.18;
+	}
+
+	@media(max-width:1199px) {
+		font-size: 45px;
+		line-height: 1.18;
+	}
+}
+
+.text-16 {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.text-18 {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1740px;
+
+	padding: 0;
+
+	@media(max-width: 1770px) {
+		padding: 0 0.9375rem;
+
+	}
+}
+
+.container-fluid {
+	padding-left: 80px;
+	padding-right: 80px;
+
+	@media(max-width:1599px) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@media(max-width:1439px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	@media(max-width:1364px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.btn {
+	display: inline-block;
+	color: #fff;
+	.text-18;
+	background-color: @colorBg;
+	.tr;
+	height: 68px;
+	border-radius: 3px;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	@media(max-width:767px) {
+		height: 50px;
+
+	}
+
+	&:hover {
+		background-color: @title;
+		color: #fff;
+	}
+
+}
+
+.btn-round {
+	color: #fff;
+	background-color: @colorBg;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1;
+	.tr;
+
+	@media(max-width:767px) {
+		width: 45px;
+		height: 45px;
+	}
+
+	&:hover {
+		background-color: @title;
+		color: #fff;
+	}
+}
+
+.flex-block {
+	display: flex;
+	align-items: center;
+}
+
+@keyframes swingElement {
+	0% {
+		transform: translateY(0px)
+	}
+
+	50% {
+		transform: translateY(15px)
+	}
+
+	100% {
+		transform: translateY(0px)
+	}
+}

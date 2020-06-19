@@ -48,7 +48,7 @@
 			position: absolute;
 			left: 0;
 			bottom: 3px;
-			x height: 2px;
+			height: 2px;
 			background-color: @colorBg;
 			width: 0;
 			.tr;
@@ -66,6 +66,10 @@
 
 .header-fix.active {
 	display: block;
+
+	@media(max-width:991px) {
+		display: none;
+	}
 }
 
 .header {
@@ -81,6 +85,14 @@
 			z-index: 2;
 			bottom: 40px;
 			right: 40px;
+
+			@media(max-width:1439px) {
+				width: 54%;
+			}
+
+			@media(max-width:1199px) {
+				display: none;
+			}
 		}
 	}
 

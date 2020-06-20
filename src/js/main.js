@@ -1,8 +1,5 @@
 $(document).ready(function () {
-	//-lazy
-	$(function () {
-		$('.lazy').lazy();
-	});
+
 	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
 	window.addEventListener('scroll', function () {
 		const fixMenu = document.querySelector('.header-fix');

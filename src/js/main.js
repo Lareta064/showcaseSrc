@@ -91,4 +91,11 @@ $(document).ready(function () {
 		Visible(item);
 	}
 
+	/*PAGE-PORTFOLIO */
+	$('.elements-gride').masonry({
+		itemSelector: '.gride-item',
+
+		columnWidth: '.gride-item',
+		percentPosition: true
+	});
 })

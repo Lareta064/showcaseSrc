@@ -88,14 +88,12 @@ input {
 	margin-right: auto;
 	transform: translateY(-50%);
 
-	@media(max-width:767px) {
-		display: none;
-	}
+
 
 	a {
 		display: block;
 		position: relative;
-		padding-left: 35px;
+		padding-left: 2.2em;
 		font-size: 15px;
 		line-height: 26px;
 		color: #8799A3;
@@ -153,6 +151,32 @@ input {
 
 		&:after {
 			display: none;
+		}
+	}
+
+	@media(max-width:767px) {
+		height: 40px;
+
+		a:first-child {
+			width: 40px;
+			height: 40px;
+
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+		}
+
+		a {
+			font-size: 10px;
+		}
+
+		a:after {
+
+			right: -13px;
+			top: 10px;
+			width: 6px;
+			height: 6px;
 		}
 	}
 }

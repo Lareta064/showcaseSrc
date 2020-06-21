@@ -83,7 +83,7 @@ mixin logo
 				c-6.5,6.5-15.5,10.6-25.4,10.9c-21.1,0.5-38.2-17-38.2-38.1v-93.4C291.7,160.1,289.7,155.5,286.3,152.1z")
 					path.st1(d="M329.5,390L329.5,390c-20.6,0-37.3-16.7-37.3-37.3l0,0c0-20.6,16.7-37.3,37.3-37.3l0,0\
 				c20.6,0,37.3,16.7,37.3,37.3l0,0C366.8,373.3,350.1,390,329.5,390z")
-mixin projectHeader(src,title)
+mixin projectHeader(src,title, titleClass)
 	.header-fix
 		.container
 			.header-fix-content
@@ -114,8 +114,10 @@ mixin projectHeader(src,title)
 					a(href="#!").btn-round.mob-btn#mob-btn
 						+menuIcon
 		
-		
-			h1.title-1 #{title}
+			if titleClass
+				h1(class="title-1 "+ titleClass) #{title}
+			else
+				h1.title-1 #{title}
 				
 		
 		//МОДАЛЬНОЕ ОКНО ПОИСКА
@@ -165,7 +167,10 @@ mixin social-icons
 			+whatsapp
 		a(href="#")
 			+instagram
-
+mixin arrow
+	<svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M12.3687 9.36875L7.625 14.1062V0.25H6.375V14.1062L1.63125 9.36875L0.75 10.25L7 16.5L13.25 10.25L12.3687 9.36875Z" fill="#2E2E2E"/>
+		</svg>
 mixin titleGroup(text1, text2, text3)
 	.title-group
 		h2.back-title #{text1}

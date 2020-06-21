@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug
+
+block content
+	+projectHeader('headerBg2', 'Сайт персонального фотографа')
+	include ../sections/_project-photo.pug
+
+	include ../sections/_footer.pug
+
+
+block variables
+	-var title = "Pizza";

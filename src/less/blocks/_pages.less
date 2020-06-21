@@ -1,8 +1,16 @@
 .portfolio-page {
 	padding-bottom: 125px;
 
-	@media(max-width:767px) {
+	@media(max-width:1439px) {
+		padding-bottom: 100px;
+	}
+
+	@media(max-width:1199px) {
 		padding-bottom: 80px;
+	}
+
+	@media(max-width:991px) {
+		padding-bottom: 60px;
 	}
 }
 
@@ -89,7 +97,7 @@
 }
 
 // BLOG-PAGE
-.portfolio-page .blog-card .blog-card__text {
+.blog-page .blog-card .blog-card__text {
 	min-height: 290px;
 	max-height: 290px;
 
@@ -101,5 +109,17 @@
 	@media(max-width:767px) {
 		min-height: unset;
 		max-height: unset;
+	}
+}
+
+.page-content {
+	padding-top: 60px;
+
+	@media(max-width:991px) {
+		padding-top: 40px;
+	}
+
+	@media(max-width:767px) {
+		padding-top: 20px;
 	}
 }

@@ -79,8 +79,8 @@
 		}
 
 		@media(max-width:991px) {
-			min-height: 280px;
-			max-height: 280px;
+			min-height: 330px;
+			max-height: 330px;
 		}
 
 		@media(max-width:767px) {
@@ -88,10 +88,18 @@
 			max-height: unset;
 		}
 
-		h3 {
+		a {
 			font-size: 34px;
 			margin-bottom: 30px;
 			line-height: 1.1765;
+			display: block;
+			color: @title;
+			.tr;
+			.rubik;
+
+			&:hover {
+				color: @colorBg;
+			}
 
 			@media(max-width:1199px) {
 				font-size: 32px;

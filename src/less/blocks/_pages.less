@@ -87,3 +87,19 @@
 		background-color: @colorBg;
 	}
 }
+
+// BLOG-PAGE
+.portfolio-page .blog-card .blog-card__text {
+	min-height: 290px;
+	max-height: 290px;
+
+	@media(max-width:991px) {
+		min-height: 330px;
+		max-height: 330px;
+	}
+
+	@media(max-width:767px) {
+		min-height: unset;
+		max-height: unset;
+	}
+}

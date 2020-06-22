@@ -90,23 +90,23 @@ mixin projectHeader(src,title, titleClass)
 				a(href="index.html").logo
 					+logo
 				nav
-					a(href="#") Главная
-					a(href="#") О нас
+					a(href="index.html") Главная
+					a(href="index.html#aboutus") О нас
 					a(href="portfolio.html") Портфолио
 					a(href="blog.html") Блог
-					a(href="#") Контакты
+					a(href="contacts.html") Контакты
 
 	header.header.header--project(style="background-image: url(img/"+src+".png);")
 		.container-fluid
 			.header-top
 				a(href="index.html").logo
 					+logo
-				//- nav.nav-menu
-				//- 	a(href="#") Главная
-				//- 	a(href="#") О нас
-				//- 	a(href="portfolio.html") Портфолио
-				//- 	a(href="blog.html") Блог
-				//- 	a(href="#") Контакты
+				nav.nav-menu
+					a(href="index.html") Главная
+					a(href="index.html#aboutus") О нас
+					a(href="portfolio.html") Портфолио
+					a(href="blog.html") Блог
+					a(href="contacts.html") Контакты
 				.btn-box
 					a(href="#!").btn-round.show-search#show-search
 						i.fas.fa-search
@@ -132,17 +132,17 @@ mixin projectHeader(src,title, titleClass)
 						button
 							i.fas.fa-search
 		
-		//МОБИЛЬНОЕ МЕНЮ
+		//МОДАЛЬНОЕ
 		.abs-wrapper.mob-menu#mob-menu
 			.container
 				button.btn-close.close-menu
 					i.fas.fa-times
 				nav
-					a(href="#") Главная
-					a(href="#") О нас
-					a(href="#") Портфолио
-					a(href="#") Блог
-					a(href="#") Контакты
+					a(href="index.html") Главная
+					a(href="index.html#aboutus") О нас
+					a(href="portfolio.html") Портфолио
+					a(href="blog.html") Блог
+					a(href="contacts.html") Контакты
 mixin footerLogo
 	<svg width="160" height="84" viewBox="0 0 160 84" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M99.3299 9.00648V33.1598C99.3299 33.4114 99.2353 33.6473 99.0617 33.836C98.8724 34.0247 98.6516 34.1347 98.3992 34.1347C98.1468 34.1347 97.9102 34.0404 97.7209 33.8517C97.5316 33.663 97.4369 33.4271 97.4369 33.1755V15.2492L91.7738 33.4114C91.758 33.6315 91.6318 33.8202 91.411 33.9618C91.0481 34.1819 90.5749 34.1976 90.2594 33.946C90.1174 33.836 90.007 33.6944 89.9597 33.5529L89.9439 33.49L84.2176 15.3121V33.1755C84.2176 33.4271 84.123 33.663 83.9337 33.8517C83.5551 34.2134 82.9714 34.2291 82.5928 33.8517C82.4193 33.6787 82.3089 33.4743 82.2773 33.2227V33.1755V9.00648C82.2773 8.73916 82.3878 8.50328 82.6086 8.31459C82.8137 8.15734 83.0503 8.06299 83.3185 8.06299C83.5551 8.06299 83.9652 8.14161 84.1703 8.72343L90.8115 29.9362L97.4212 8.75488C97.5789 8.31459 97.926 8.07871 98.3834 8.07871C98.6201 8.07871 98.8409 8.15734 99.0302 8.33031C99.2195 8.48756 99.3299 8.73916 99.3299 9.00648Z" fill="white"/>

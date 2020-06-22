@@ -17,7 +17,7 @@
 .elements-gride {
 	@media(max-width:767px) {
 
-		max-width: 450px;
+		max-width: 470px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -25,16 +25,18 @@
 }
 
 .gride-item {
-	width: 50%;
-	padding: 15px;
+
+	margin-bottom: 30px;
+	max-width: 560px;
+	margin-left: auto;
+	width: 100%;
+	margin-right: auto;
 
 	@media(max-width:767px) {
-		width: 100%;
-		max-width: 450px;
-		margin-left: auto;
-		margin-right: auto;
+
+		max-width: 470px;
 		padding: 0;
-		padding-bottom: 30px;
+
 	}
 
 
@@ -224,4 +226,147 @@
 			padding-right: 40px;
 		}
 	}
+}
+
+.contacts-page {
+	padding-bottom: 120px;
+
+	@media(max-width:1199px) {
+		margin-bottom: 100px;
+	}
+
+	@media(max-width:767px) {
+		margin-bottom: 60px;
+	}
+
+	.block-title {
+		margin-bottom: 30px;
+
+		h3 {
+			font-size: 32px;
+			line-height: 1.2;
+
+			font-family: 'Rubik';
+		}
+	}
+
+	.contacts-text {
+
+
+		.block-title+p {
+			font-size: 24px;
+			line-height: 1.2;
+			margin-bottom: 40px;
+			line-height: 1.45;
+
+			@media(max-width:991px) {
+				font-size: 22px;
+
+			}
+
+			@media(max-width:767px) {
+				font-size: 20px;
+				margin-bottom: 25px;
+			}
+		}
+
+		@media(max-width:767px) {
+			margin-bottom: 30px;
+			max-width: 555px;
+		}
+	}
+
+	ul {
+		li {
+			display: flex;
+			align-items: center;
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 10px;
+
+			span {
+				margin-right: 30px;
+				display: block;
+				min-width: 50px;
+				max-width: 50px;
+				height: 50px;
+				color: @colorBg;
+				font-size: 26px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+			}
+
+			p,
+			a {
+				font-size: 18px;
+				color: @text;
+			}
+
+			a:hover {
+				color: @colorBg;
+			}
+		}
+	}
+}
+
+.contact-form {
+
+	input {
+		border: 0px;
+		background-color: rgb(243, 244, 246);
+		border: 2px solid rgb(243, 244, 246);
+		border-radius: 3px;
+		height: 60px;
+		display: block;
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		outline: none !important;
+
+
+
+	}
+
+	textarea {
+		width: 100%;
+		background-color: rgb(243, 244, 246);
+		border: 2px solid rgb(243, 244, 246);
+		border-radius: 3px;
+		height: 60px;
+		display: block;
+		height: 160px;
+		padding: 15px;
+		outline: none !important;
+
+		@media(max-width:991px) {
+			height: 130px;
+		}
+
+	}
+
+	input:focus,
+	textarea:focus {
+		background-color: #fff;
+	}
+
+	.form-field {
+		margin-bottom: 30px;
+
+		@media(max-width:767px) {
+			max-width: 555px;
+		}
+	}
+
+	.form-btn .btn {
+		text-transform: uppercase;
+		padding-left: 45px;
+		padding-right: 45px;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 14px;
+		outline: none !important;
+	}
+
 }

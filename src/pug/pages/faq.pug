@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug
+
+block content
+	+projectHeader('headerBg3', 'Отвечаем на ваши вопросы', 'title-1--red')
+	include ../sections/_faq.pug
+
+	include ../sections/_footer.pug
+
+
+block variables
+	-var title = "FAQ";

@@ -30,15 +30,15 @@ header.header
 	.container.container--rel
 		.header-content
 			.header-text
-				h1.title-1 Продаем <br> готовые сайты <br>"под ключ"
-				a(href="#!").btn.btn-icon Смотреть от 6000 руб.
+				h1.title-1(data-aos="zoom-up" data-aos-duration='800' data-aos-delay='500') Продаем <br> готовые сайты <br>"под ключ"
+				a(href="#!" data-aos="fade-up" data-aos-duration='500' data-aos-delay='1500').btn.btn-icon Смотреть от 6000 руб.
 					i.fas.fa-caret-right
 			.row
 				.col-xl-6.offset-xl-6
 					.header-image
 						.parallax-item
-							img(src="img/layout1.png", alt="img")
-						img(src="img/main.png", alt="img")
+							img(src="img/layout1.png", alt="img" data-aos="fade-down" data-aos-duration='500' data-aos-delay='1000')
+						img(src="img/main.png", alt="img" data-aos="fade-up" data-aos-duration='500')
 	
 	//МОДАЛЬНОЕ ОКНО ПОИСКА
 	.abs-wrapper.search-modal#search-modal
@@ -49,7 +49,7 @@ header.header
 			form(action="#")
 				.form-field
 					input(type="text" name="searchInput" placeholder="Введите текст...")
-					button(type="submit")
+					button
 						i.fas.fa-search
 	
 	//МОБИЛЬНОЕ МЕНЮ

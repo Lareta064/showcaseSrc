@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
 	window.addEventListener('scroll', function () {
 		const fixMenu = document.querySelector('.header-fix');
@@ -32,7 +33,9 @@ $(document).ready(function () {
 	closeMobMenu.addEventListener('click', function (e) {
 		mobMenu.classList.remove('active');
 	});
-
+	AOS.init({
+		disable: "mobile"
+	});
 	// ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ
 	let headerSection = document.querySelector('.header')
 	let bg = document.querySelectorAll('.parallax-item');
@@ -88,4 +91,21 @@ $(document).ready(function () {
 		Visible(item);
 	}
 
+	/*PAGE-PORTFOLIO */
+	$('.elements-gride').masonry({
+		itemSelector: '.gride-item',
+
+		columnWidth: '.gride-item',
+		percentPosition: true
+	});
+
+	//аккордеон развернуть стрелку
+	$('.collapsable').on('show.bs.collapse', function () {
+		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+		tabIcon.addClass("rotate");
+	});
+	$('.collapsable').on('hide.bs.collapse', function () {
+		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+		tabIcon.removeClass("rotate");
+	});
 })

@@ -3,12 +3,29 @@
 	padding-bottom: 140px;
 	background-color: #F8F8F8;
 
+	@media(max-width:991px) {
+		overflow: hidden;
+	}
+
+	@media(max-width:991px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+
 	.block-img {
 		padding-top: 50px;
 		display: block;
 		animation-name: swingElement;
 		animation-duration: 5s;
 		animation-iteration-count: infinite;
+
+		@media(max-width:1199px) {
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+		}
 
 		@media(max-width:889px) {
 			display: none;
@@ -19,7 +36,11 @@
 		margin-bottom: .8em;
 		position: relative;
 		z-index: 4;
-		padding-left: 1.5em;
+		// padding-left: 1.7em;
+
+		// @media(max-width:991px) {
+		// 	padding-left: 0;
+		// }
 	}
 
 	.block-list--about {
@@ -28,10 +49,25 @@
 		padding-bottom: 100px;
 		padding-left: 24px;
 		padding-right: 15px;
-		margin-top: -470px;
+		margin-top: -415px;
 		margin-left: 70px;
 		position: relative;
 		z-index: 3;
+
+		@media(max-width:1439px) {
+			padding-top: 450px;
+			margin-top: -450px;
+		}
+
+		@media(max-width:1350px) {
+			padding-top: 400px;
+			margin-top: -350px;
+		}
+
+		@media(max-width:991px) {
+			padding-top: 30px;
+			margin-top: 0;
+		}
 
 		.decor-arr {
 			position: absolute;
@@ -40,6 +76,10 @@
 			animation-name: swingElement;
 			animation-duration: 5s;
 			animation-iteration-count: infinite;
+
+			@media(max-width:991px) {
+				display: none;
+			}
 		}
 
 
@@ -53,6 +93,10 @@
 			border: 2px solid #FFC404;
 			z-index: 1;
 
+			@media(max-width:991px) {
+				display: none;
+			}
+
 		}
 
 		&:before {
@@ -64,6 +108,10 @@
 			right: 22%;
 			background-color: #fff;
 			z-index: 2;
+
+			@media(max-width:991px) {
+				display: none;
+			}
 
 
 		}
@@ -125,7 +173,151 @@
 		}
 	}
 
+	.about-content {
+		position: relative;
+	}
 
+	.animate-item {
+		position: absolute;
+
+
+		z-index: 5;
+
+	}
+
+	.item1,
+	.item2,
+	.item3,
+	.item10,
+	.item11,
+	.item12 {
+		animation: move 15s linear infinite;
+	}
+
+	.item4,
+	.item5,
+	.item6,
+	.item13,
+	.item14,
+	.item15 {
+		animation: move2 20s linear infinite;
+	}
+
+	.item7,
+	.item8,
+	.item9,
+	.item16,
+	.item17,
+	.item18 {
+		animation: move 15s linear infinite;
+	}
+
+	.item1 {
+		top: 10%;
+		left: 20%;
+
+	}
+
+	.item2 {
+		bottom: -5%;
+		right: 15%;
+
+	}
+
+	.item3 {
+		top: 0%;
+		left: 4%;
+
+	}
+
+	.item4 {
+		top: 14%;
+		left: 50%;
+
+	}
+
+	.item5 {
+		bottom: 10%;
+		right: 2%;
+	}
+
+	.item6 {
+		top: 47%;
+		left: 40%;
+
+	}
+
+	.item7 {
+		top: -5%;
+		right: 7%;
+		color: rgba(255, 213, 65, .8);
+
+	}
+
+	.item8 {
+		bottom: 11%;
+		left: 2%;
+
+	}
+
+	.item9 {
+		top: -8%;
+		left: 65%;
+
+	}
+
+	.item10 {
+		top: 6%;
+		left: 49%;
+
+	}
+
+	.item11 {
+		bottom: 6%;
+		right: 29%;
+
+	}
+
+	.item12 {
+		top: 2%;
+		left: 8%;
+
+	}
+
+	.item13 {
+		top: -7%;
+		left: 9%;
+
+	}
+
+	.item14 {
+		bottom: 14%;
+		right: 22%;
+	}
+
+	.item15 {
+		top: -8%;
+		left: 36%;
+
+	}
+
+	.item16 {
+		top: 2%;
+		right: 68%;
+
+	}
+
+	.item17 {
+		bottom: 31%;
+		left: 22%;
+
+	}
+
+	.item18 {
+		top: -5%;
+		left: 25%;
+
+	}
 }
 
 /*-----ABOUT BENEFITS-----*/

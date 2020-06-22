@@ -1,0 +1,57 @@
+.header-fix
+	.container
+		.header-fix-content
+			a(href="index.html").logo
+				+logo
+			nav
+				a(href="#") Главная
+				a(href="#") О нас
+				a(href="portfolio.html") Портфолио
+				a(href="blog.html") Блог
+				a(href="#") Контакты
+
+header.header.header--project(style="background-image: url(img/headerBg1.png);")
+	.container-fluid
+		.header-top
+			a(href="index.html").logo
+				+logo
+			//- nav.nav-menu
+			//- 	a(href="#") Главная
+			//- 	a(href="#") О нас
+			//- 	a(href="portfolio.html") Портфолио
+			//- 	a(href="blog.html") Блог
+			//- 	a(href="#") Контакты
+			.btn-box
+				a(href="#!").btn-round.show-search#show-search
+					i.fas.fa-search
+
+				a(href="#!").btn-round.mob-btn#mob-btn
+					+menuIcon
+	
+	
+		h1.title-1 Сайт для пиццы и роллов
+			
+	
+	//МОДАЛЬНОЕ ОКНО ПОИСКА
+	.abs-wrapper.search-modal#search-modal
+		.container
+			button.btn-close.close-search
+				i.fas.fa-times
+
+			form(action="#")
+				.form-field
+					input(type="text" name="searchInput" placeholder="Введите текст...")
+					button
+						i.fas.fa-search
+	
+	//МОБИЛЬНОЕ МЕНЮ
+	.abs-wrapper.mob-menu#mob-menu
+		.container
+			button.btn-close.close-menu
+				i.fas.fa-times
+			nav
+				a(href="#") Главная
+				a(href="#") О нас
+				a(href="#") Портфолио
+				a(href="#") Блог
+				a(href="#") Контакты

@@ -92,12 +92,12 @@ $(document).ready(function () {
 	}
 
 	/*PAGE-PORTFOLIO */
-	$('.elements-gride').masonry({
-		itemSelector: '.gride-item',
+	// $('.elements-gride').masonry({
+	// 	itemSelector: '.gride-item',
 
-		columnWidth: '.gride-item',
-		percentPosition: true
-	});
+	// 	columnWidth: '.gride-item',
+	// 	percentPosition: true
+	// });
 
 	//аккордеон развернуть стрелку
 	$('.collapsable').on('show.bs.collapse', function () {

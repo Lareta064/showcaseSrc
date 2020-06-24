@@ -267,7 +267,8 @@
 	width: 55%;
 	max-width: 625px;
 	display: flex;
-	justify-content: space-between;
+	// justify-content: space-between;
+	justify-content: center;
 
 	@media(max-width:991px) {
 		display: none;
@@ -281,6 +282,13 @@
 	font-weight: 500;
 	.text-18;
 	color: @title;
+	margin-right: 2em;
+	white-space: nowrap;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
 	// font-family: @rubik;
 
 	&:after {

@@ -11,27 +11,28 @@ $(document).ready(function () {
 	})
 	// показать скрыть модальные окна поиска и моб меню
 	const openSearch = document.querySelector('#show-search');
-	const openMobMenu = document.querySelector('#mob-btn');
-
 	const searchModal = document.querySelector('#search-modal');
+	const searchFormInput = searchModal.querySelector('form input');
+	const searchFormButton = searchModal.querySelector('form button');
+	const openMobMenu = document.querySelector('#mob-btn');
 	const mobMenu = document.querySelector('#mob-menu');
-
-	const closeSearch = document.querySelector('button.close-search');
-	const closeMobMenu = document.querySelector('button.close-menu');
 
 	openSearch.addEventListener('click', function (e) {
 		e.preventDefault();
 		searchModal.classList.add('active');
 	});
-	closeSearch.addEventListener('click', function (e) {
-		searchModal.classList.remove('active');
+	searchModal.addEventListener('click', function (e) {
+		if (e.target != searchFormInput && e.target != searchFormButton) {
+			searchModal.classList.remove('active');
+		}
+
 	});
 	openMobMenu.addEventListener('click', function (e) {
 		e.preventDefault();
 		mobMenu.classList.add('active');
 	});
-	closeMobMenu.addEventListener('click', function (e) {
-		mobMenu.classList.remove('active');
+	mobMenu.addEventListener('click', function (e) {
+		this.classList.remove('active');
 	});
 	AOS.init({
 		disable: "mobile"
@@ -91,14 +92,6 @@ $(document).ready(function () {
 		Visible(item);
 	}
 
-	/*PAGE-PORTFOLIO */
-	// $('.elements-gride').masonry({
-	// 	itemSelector: '.gride-item',
-
-	// 	columnWidth: '.gride-item',
-	// 	percentPosition: true
-	// });
-
 	//аккордеон развернуть стрелку
 	$('.collapsable').on('show.bs.collapse', function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
@@ -108,4 +101,24 @@ $(document).ready(function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
 		tabIcon.removeClass("rotate");
 	});
+	//FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+	function autoPlayYouTubeModal() {
+		var trigger = $("body").find('[data-toggle="modal"]');
+		trigger.click(function () {
+			var theModal = $(this).data("target"),
+				videoSRC = $(this).attr("data-theVideo"),
+				videoSRCauto = videoSRC + "?autoplay=1";
+			$(theModal + ' iframe').attr('src', videoSRCauto);
+			$(theModal + ' button.close').click(function () {
+				$(theModal + ' iframe').attr('src', videoSRC);
+			});
+		});
+	}
+	autoPlayYouTubeModal();
+	$('#video1').on('hidden.bs.modal', function () {
+		$('#video1 iframe').removeAttr('src');
+	})
+	$('#video2').on('hidden.bs.modal', function () {
+		$('#video2 iframe').removeAttr('src');
+	})
 })

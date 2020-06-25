@@ -13,10 +13,15 @@ section.portfolio-page
 						.project-preview.mb-40
 							img(src="img/photo-preview.jpg", alt="preview")
 						.project-video.mb-40
-							video(src="video/video.mp4" width="100%" height="auto" controls="controls" poster="img/photo-poster.png")
+							a( href="#" data-toggle="modal" data-target="#video1" data-theVideo="https://www.youtube.com/embed/GvbQzRAi4wM")
+								span.fake-play
+									img(src="img/play.png", alt="play")
+								img(src="img/photo-poster.png", alt="preview")
 						.project-video.mb-40
-							video(src="video/video.mp4" width="100%" height="auto" controls="controls" poster="img/video-poster.png")
-							
+							a( href="#" data-toggle="modal" data-target="#video1" data-theVideo="https://www.youtube.com/embed/GvbQzRAi4wM")
+								span.fake-play
+									img(src="img/play.png", alt="play")
+								img(src="img/video-poster.png", alt="preview")
 				.col-md-6.col-xl-5
 					.project-deskrip
 						.header-block
@@ -51,3 +56,25 @@ section.portfolio-page
 									p
 										a(href="#!") website.com
 						button.btn Заказать готовый сайт
+
+// VIDEO MODAL
+#video1.modal.video-modal.fade(tabindex="-1" role="dialog" aria-labelledby="video1Title" aria-hidden="true")
+	button.close(type="button" data-dismiss="modal" aria-label="Close")
+		span(aria-hidden="true")
+	.modal-dialog.modal-dialog-centered
+		.modal-content
+			
+			.modal-body
+				.video
+					iframe(width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="")
+
+// VIDEO MODAL
+#video2.modal.video-modal.fade(tabindex="-1" role="dialog" aria-labelledby="video1Title" aria-hidden="true")
+	button.close(type="button" data-dismiss="modal" aria-label="Close")
+		span(aria-hidden="true")
+	.modal-dialog.modal-dialog-centered
+		.modal-content
+			.modal-body
+				.video
+					iframe(width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="")
+					

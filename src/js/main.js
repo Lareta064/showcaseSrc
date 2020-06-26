@@ -101,24 +101,25 @@ $(document).ready(function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
 		tabIcon.removeClass("rotate");
 	});
-	//FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-	function autoPlayYouTubeModal() {
-		var trigger = $("body").find('[data-toggle="modal"]');
-		trigger.click(function () {
-			var theModal = $(this).data("target"),
-				videoSRC = $(this).attr("data-theVideo"),
-				videoSRCauto = videoSRC + "?autoplay=1";
-			$(theModal + ' iframe').attr('src', videoSRCauto);
-			$(theModal + ' button.close').click(function () {
-				$(theModal + ' iframe').attr('src', videoSRC);
-			});
-		});
-	}
-	autoPlayYouTubeModal();
-	$('#video1').on('hidden.bs.modal', function () {
-		$('#video1 iframe').removeAttr('src');
-	})
-	$('#video2').on('hidden.bs.modal', function () {
-		$('#video2 iframe').removeAttr('src');
-	})
+	//video modal
+	let youtube_src1 = $("#video1 video").attr("src");
+	let youtube_src2 = $("#video2 video").attr("src");
+
+	$('#video1').on('show.bs.modal', function () {
+		console.log('555');
+		$("#video1 video").attr("src", youtube_src1 + "?autoplay=1");
+	});
+	$("#video1").on('hidden.bs.modal', function (e) {
+		$("#video1 video").attr("src", youtube_src1 + "?autoplay=0");
+
+	});
+	$('#video2').on('show.bs.modal', function () {
+		console.log('555');
+		$("#video2 video").attr("src", youtube_src2 + "?autoplay=1");
+	});
+	$("#video2").on('hidden.bs.modal', function (e) {
+		$("#video2 video").attr("src", youtube_src2 + "?autoplay=0");
+
+	});
+
 })

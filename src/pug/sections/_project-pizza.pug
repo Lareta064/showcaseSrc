@@ -13,12 +13,12 @@ section.portfolio-page
 						.project-preview.mb-40
 							img(src="img/photo-preview.jpg", alt="preview")
 						.project-video.mb-40
-							a( href="#" data-toggle="modal" data-target="#video1" data-theVideo="https://www.youtube.com/embed/GvbQzRAi4wM")
+							a( href="#" data-toggle="modal" data-target="#video1" )
 								span.fake-play
 									img(src="img/play.png", alt="play")
 								img(src="img/photo-poster.png", alt="preview")
 						.project-video.mb-40
-							a( href="#" data-toggle="modal" data-target="#video1" data-theVideo="https://www.youtube.com/embed/GvbQzRAi4wM")
+							a( href="#" data-toggle="modal" data-target="#video2" )
 								span.fake-play
 									img(src="img/play.png", alt="play")
 								img(src="img/video-poster.png", alt="preview")
@@ -66,7 +66,7 @@ section.portfolio-page
 			
 			.modal-body
 				.video
-					iframe(width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="")
+					video(src="video/video.mp4" controls="controls" width="100%" height="100%")
 
 // VIDEO MODAL
 #video2.modal.video-modal.fade(tabindex="-1" role="dialog" aria-labelledby="video1Title" aria-hidden="true")
@@ -76,4 +76,4 @@ section.portfolio-page
 		.modal-content
 			.modal-body
 				.video
-					iframe(width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted")
+					video(src="video/video.mp4" controls="controls" width="100%" height="100%")

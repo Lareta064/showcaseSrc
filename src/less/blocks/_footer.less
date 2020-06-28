@@ -33,7 +33,8 @@
 .social-icons {
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-	line-height: 1;
+	// height: 24px;
+	// max-height: 24px;
 }
 
 .social-icons a {
@@ -44,11 +45,14 @@
 	transition: .3s;
 	line-height: 1;
 	font-size: 0;
+	// width: 24px;
+	// height: 24px;
+
 }
 
 .social-icons a svg {
-	width: 27px;
-	height: 27px;
+	// width: 24px;
+	// height: 24px;
 }
 
 .social-icons a:last-child {
@@ -71,6 +75,20 @@
 
 	span {
 		text-transform: uppercase;
+	}
+
+	p {
+		max-width: 100%;
+
+		.mob-br {
+			display: none;
+
+			@media(max-width:579px) {
+				display: block;
+			}
+		}
+
+
 	}
 
 }

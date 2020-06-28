@@ -6,8 +6,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Rubik', sans-serif;
 html,
 body {
 	margin: 0;
@@ -74,6 +72,25 @@ input {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+
+}
+
+.blog-details .container-medium {
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+
+	@media(max-width:1199px) {
+		max-width: 960px;
+	}
+
+	@media(max-width:991px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
 }
 
 .bredcrb {
@@ -168,12 +185,13 @@ input {
 		}
 
 		a {
-			font-size: 10px;
+			font-size: 9px;
+			padding-left: 20px;
 		}
 
 		a:after {
 
-			right: -13px;
+			right: -10px;
 			top: 10px;
 			width: 6px;
 			height: 6px;

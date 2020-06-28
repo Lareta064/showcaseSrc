@@ -39,6 +39,109 @@
 	}
 }
 
+.modal-backdrop {
+	opacity: .8 !important;
+
+}
+
+.video-modal button.close {
+	position: absolute;
+	border: 0px;
+	right: 5%;
+	top: 5%;
+	text-shadow: none;
+	z-index: 10;
+	display: block;
+	opacity: 1;
+	outline: none !important;
+	cursor: pointer;
+
+	&:hover {
+		opacity: .7;
+	}
+
+	span {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		display: block;
+		cursor: pointer;
+
+		@media(max-width: 1199px) {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	span:after {
+		content: '';
+		position: absolute;
+		background-color: red;
+		height: 80px;
+		width: 2px;
+		top: 0;
+		bottom: 0;
+		transform: rotate(45deg)
+	}
+
+	span:before {
+		content: '';
+		position: absolute;
+		background-color: red;
+		height: 80px;
+		width: 2px;
+		top: 0;
+		bottom: 0;
+		transform: rotate(-45deg)
+	}
+
+	@media(max-width: 1199px) {
+
+		span:before,
+		span:after {
+			width: 40px;
+			height: 40px;
+		}
+	}
+}
+
+.video-modal .modal-dialog {
+	max-width: 1000px;
+
+	.video {
+		background-color: #000;
+	}
+
+	@media(max-width:1040px) {
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.modal-body {
+		padding: 0;
+	}
+}
+
+.project-video a {
+	display: block;
+	position: relative;
+
+	.fake-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		.tr;
+
+		&:hover {
+			opacity: .9;
+		}
+	}
+}
+
+
 .mb-40 {
 	margin-bottom: 40px;
 }

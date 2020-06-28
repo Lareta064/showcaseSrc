@@ -11,27 +11,28 @@ $(document).ready(function () {
 	})
 	// показать скрыть модальные окна поиска и моб меню
 	const openSearch = document.querySelector('#show-search');
-	const openMobMenu = document.querySelector('#mob-btn');
-
 	const searchModal = document.querySelector('#search-modal');
+	const searchFormInput = searchModal.querySelector('form input');
+	const searchFormButton = searchModal.querySelector('form button');
+	const openMobMenu = document.querySelector('#mob-btn');
 	const mobMenu = document.querySelector('#mob-menu');
-
-	const closeSearch = document.querySelector('button.close-search');
-	const closeMobMenu = document.querySelector('button.close-menu');
 
 	openSearch.addEventListener('click', function (e) {
 		e.preventDefault();
 		searchModal.classList.add('active');
 	});
-	closeSearch.addEventListener('click', function (e) {
-		searchModal.classList.remove('active');
+	searchModal.addEventListener('click', function (e) {
+		if (e.target != searchFormInput && e.target != searchFormButton) {
+			searchModal.classList.remove('active');
+		}
+
 	});
 	openMobMenu.addEventListener('click', function (e) {
 		e.preventDefault();
 		mobMenu.classList.add('active');
 	});
-	closeMobMenu.addEventListener('click', function (e) {
-		mobMenu.classList.remove('active');
+	mobMenu.addEventListener('click', function (e) {
+		this.classList.remove('active');
 	});
 	AOS.init({
 		disable: "mobile"
@@ -91,14 +92,6 @@ $(document).ready(function () {
 		Visible(item);
 	}
 
-	/*PAGE-PORTFOLIO */
-	$('.elements-gride').masonry({
-		itemSelector: '.gride-item',
-
-		columnWidth: '.gride-item',
-		percentPosition: true
-	});
-
 	//аккордеон развернуть стрелку
 	$('.collapsable').on('show.bs.collapse', function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
@@ -108,4 +101,25 @@ $(document).ready(function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
 		tabIcon.removeClass("rotate");
 	});
+	//video modal
+	let youtube_src1 = $("#video1 video").attr("src");
+	let youtube_src2 = $("#video2 video").attr("src");
+
+	$('#video1').on('show.bs.modal', function () {
+		console.log('555');
+		$("#video1 video").attr("src", youtube_src1 + "?autoplay=1");
+	});
+	$("#video1").on('hidden.bs.modal', function (e) {
+		$("#video1 video").attr("src", youtube_src1 + "?autoplay=0");
+
+	});
+	$('#video2').on('show.bs.modal', function () {
+		console.log('555');
+		$("#video2 video").attr("src", youtube_src2 + "?autoplay=1");
+	});
+	$("#video2").on('hidden.bs.modal', function (e) {
+		$("#video2 video").attr("src", youtube_src2 + "?autoplay=0");
+
+	});
+
 })

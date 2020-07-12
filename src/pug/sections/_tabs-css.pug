@@ -1,0 +1,48 @@
+.tabs
+	input#tab1(type="radio" name="tabs" checked="")
+	label(for="tab1" title="Вкладка 1") Ввод в ручную
+	input#tab2(type="radio" name="tabs")
+	label(for="tab2" title="Вкладка 2") Отправка вложением
+
+	article#content-tab1
+		.payment-details
+			.form-group
+				input(type="text" name="userName" placeholder="Полное наименование*")
+				span.error-notify
+				span.error-text Введите данные
+			.form-group.error
+				input(type="text" name="userName" placeholder="Адрес компании**")
+				span.error-notify
+				span.error-text Введите данные
+			.form-group
+				input(type="text" name="userName" placeholder="ИНН*")
+				span.error-notify
+				span.error-text Введите данные
+			.form-group
+				input(type="text" name="userName" placeholder="КПП*")
+				span.error-notify
+				span.error-text Введите данные
+			.form-group
+				input(type="text" name="userName" placeholder="Номер расчетного счета*")
+				span.error-notify
+				span.error-text Введите данные
+			.form-group
+				input(type="text" name="userName" placeholder=" Номер кор. счета*")
+				span.error-notify
+				span.error-text Введите данные
+			.form-group
+				input(type="text" name="userName" placeholder="БИК*")
+				span.error-notify
+				span.error-text Введите данные
+			.form-group
+				input(type="text" name="userName" placeholder="Email*")
+				span.error-notify
+				span.error-text Введите данные
+			
+	article#content-tab2
+		.select-file
+			.link-icon
+				i.fas.fa-link
+			input(type="file" id="file2" data-multiple-caption="{count} файлов выбрано" multiple class="inputfile")
+			label.form-label(for="file2")
+				span Прикрепить карточку организации

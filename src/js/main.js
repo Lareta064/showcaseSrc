@@ -101,12 +101,13 @@ $(document).ready(function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
 		tabIcon.removeClass("rotate");
 	});
+
 	//video modal
 	let youtube_src1 = $("#video1 video").attr("src");
 	let youtube_src2 = $("#video2 video").attr("src");
 
 	$('#video1').on('show.bs.modal', function () {
-		console.log('555');
+
 		$("#video1 video").attr("src", youtube_src1 + "?autoplay=1");
 	});
 	$("#video1").on('hidden.bs.modal', function (e) {
@@ -114,7 +115,7 @@ $(document).ready(function () {
 
 	});
 	$('#video2').on('show.bs.modal', function () {
-		console.log('555');
+
 		$("#video2 video").attr("src", youtube_src2 + "?autoplay=1");
 	});
 	$("#video2").on('hidden.bs.modal', function (e) {
@@ -122,4 +123,41 @@ $(document).ready(function () {
 
 	});
 
+	/* КАСТОМНЫЙ ВЫБОР ФАЙЛА*/
+	;
+	(function (document, window, index) {
+		var inputs = document.querySelectorAll('.inputfile');
+		Array.prototype.forEach.call(inputs, function (input) {
+			var label = input.nextElementSibling,
+				labelVal = label.innerHTML;
+
+			input.addEventListener('change', function (e) {
+				var fileName = '';
+				if (this.files && this.files.length > 1)
+					fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+				else
+					fileName = e.target.value.split('\\').pop();
+
+				if (fileName) {
+
+					if (label.firstChild.nodeType === Node.ELEMENT_NODE) {
+						label.querySelector('span').innerHTML = fileName;
+					} else {
+						label.nextElementSibling.innerHTML = fileName;
+					}
+
+
+				} else
+					label.innerHTML = labelVal;
+			});
+
+			// Firefox bug fix
+			input.addEventListener('focus', function () {
+				input.classList.add('has-focus');
+			});
+			input.addEventListener('blur', function () {
+				input.classList.remove('has-focus');
+			});
+		});
+	}(document, window, 0));
 })

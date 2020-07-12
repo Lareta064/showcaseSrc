@@ -1,0 +1,66 @@
+section.checkout
+	.container-medium
+		.page-content
+			form(action="").contact-form
+				.row
+					.col-md-6
+						.user-info-wrapper
+							.block-title
+								h3 Данные получателя услуги:
+							
+							.form-field.h-68
+								input(type="text" name="userEmail" placeholder="Email")
+							.form-field.h-68
+								input(type="text" name="userName" placeholder="Получатель")
+							.form-field.h-68
+								input(type="text" name="phone" placeholder="Телефон")
+							
+							.form-field.h-68
+								textarea(name="message",  rows="3" placeholder="Комментарий")
+							
+							.form-btn.form-btn--short
+								button.btn.btn--light 
+									span очистить форму
+					.col-md-6
+						.paymen-type
+							.block-title
+								h3 Способы оплаты:
+							.checkout-box
+								.form-field
+									label
+										input(type="radio" name="paymenType" value="")
+										| Оплата через Яндекс
+								.form-field.form-field--drop
+									label
+										input(type="radio" name="paymenType" value="")
+										| Оплата на банковскую карту (личный перевод)
+										.checkbox-drop
+											p Номер карты: 2222 4444 5555 4123
+											.select-file
+												.link-icon
+													i.fas.fa-link
+												input(type="file" id="file" data-multiple-caption="{count} файлов выбрано" multiple class="inputfile")
+												label.form-label(for="file")
+													span Прикрепить чек оплаты (фото)
+								.form-field.form-field--drop
+									label
+										input(type="radio" name="paymenType" value="")
+										|  Оплата через расчетный счет
+										.checkbox-drop
+											.info
+												p Ваши реквизиты: #[span (Вы получите счет на указанную почту)]
+											include _tabs-css.pug
+				
+				.checkout-form__footer
+					.checkout-form-send.order-md-2
+						.total-summ
+							span  Итого: 
+							span 10 000 &#8381;
+						.form-group
+							button(type="submit").btn.btn-icon Отправить
+								i.fas.fa-caret-right
+					.form-group.agree-text.order-md-1
+							label(class="form-label")
+								input(class="form-checkbox" type="checkbox" name="agreePolitic")
+								span.custom-checkbox
+								| Принимаю  #[a(href="#") условия обработки] моих данных.

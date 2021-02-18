@@ -12,25 +12,38 @@ $(document).ready(function () {
 	// показать скрыть модальные окна поиска и моб меню
 	const openSearch = document.querySelector('#show-search');
 	const searchModal = document.querySelector('#search-modal');
+
 	const searchFormInput = searchModal.querySelector('form input');
 	const searchFormButton = searchModal.querySelector('form button');
+
+
 	const openMobMenu = document.querySelector('#mob-btn');
+	const openMobMenu2 = document.querySelector('#mob-btn2');
 	const mobMenu = document.querySelector('#mob-menu');
 
 	openSearch.addEventListener('click', function (e) {
 		e.preventDefault();
 		searchModal.classList.add('active');
 	});
+
 	searchModal.addEventListener('click', function (e) {
 		if (e.target != searchFormInput && e.target != searchFormButton) {
 			searchModal.classList.remove('active');
 		}
 
 	});
+
+
 	openMobMenu.addEventListener('click', function (e) {
 		e.preventDefault();
 		mobMenu.classList.add('active');
 	});
+	
+	openMobMenu2.addEventListener('click', function (e) {
+		e.preventDefault();
+		mobMenu.classList.add('active');
+	});
+
 	mobMenu.addEventListener('click', function (e) {
 		this.classList.remove('active');
 	});
@@ -160,4 +173,116 @@ $(document).ready(function () {
 			});
 		});
 	}(document, window, 0));
+
+
+	//
+	const btnOpenBasketModal = document.querySelectorAll('.btn[ data-role="showBasketModal"]');
+	if (btnOpenBasketModal) {
+		for (let item of btnOpenBasketModal) {
+			item.addEventListener('click', function () {
+				basketModal.classList.add('active');
+
+			});
+		}
+
+	}
+	//закрыть модально окно Вы добавили товар в корзину
+	const basketModal = document.querySelector('#basketModal');
+	if (basketModal) {
+		const btnCloseBasketModal = basketModal.querySelectorAll('.basketModal-close');
+		for (let item of btnCloseBasketModal) {
+			item.addEventListener('click', function () {
+				basketModal.classList.remove('active');
+
+
+			})
+		}
+
+	}
+	// ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ в модальном окне корзины
+	let modalSection = document.querySelector('.basketModal-content')
+	let prxItems = document.querySelectorAll('.decoreItem');
+	window.addEventListener('mousemove', function (e) {
+		let x = e.clientX / window.innerWidth;
+		let y = e.clientY / window.innerHeight;
+		for (let item of prxItems) {
+			item.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+		}
+
+	});
+
+	//закрытие/открытие окна Презент
+	const presentModal = document.querySelector('#presentModal');
+	const btnClosePresentModal = document.querySelector('.presentModal-close');
+	const btnOpenPresentModal = document.querySelectorAll('[data-role="openPresentModal"]');
+	if (presentModal) {
+
+		for (let item of btnOpenPresentModal) {
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				presentModal.classList.add('active');
+			})
+		}
+
+		btnClosePresentModal.addEventListener('click', function (e) {
+			e.preventDefault();
+			presentModal.classList.remove('active');
+		});
+	}
+
+	//  modal subcribe
+	const btnOpenSubscribeModal = document.querySelectorAll('[data-role="openSubscribeModal"]');
+	const btnSubscribeModalClose = document.querySelectorAll('.subscribeModal-close');
+	if (btnOpenSubscribeModal) {
+		for (let item of btnOpenSubscribeModal) {
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				subscribeModal.classList.add('active');
+			});
+		}
+		for (let item of btnSubscribeModalClose) {
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				subscribeModal.classList.remove('active');
+			});
+		}
+
+	}
+
+	// clients slider
+	let clientsSlider = $('.clients-slider');
+	clientsSlider.owlCarousel({
+		items: 1,
+		loop: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		navSpeed: 1000,
+		smartSpeed: 1000,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
+		dots: false,
+		margin: 15,
+		nav: true,
+		navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2,
+				stagePadding: 60
+			},
+			992: {
+				items: 3
+			},
+			1200: {
+				items: 3
+			},
+			1365: {
+				items: 4,
+				stagePadding: 0
+			}
+		}
+
+	})
 })

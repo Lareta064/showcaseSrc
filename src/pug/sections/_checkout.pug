@@ -52,15 +52,15 @@ section.checkout
 											include _tabs-css.pug
 				
 				.checkout-form__footer
-					.checkout-form-send.order-md-2
+					.form-group.agree-text
+							label(class="form-label")
+								input(class="form-checkbox" type="checkbox" name="agreePolitic")
+								span.custom-checkbox
+								| Принимаю  #[a(href="#") условия обработки] моих данных.
+					.checkout-form-send
 						.total-summ
 							span  Итого: 
 							span 10 000 &#8381;
 						.form-group
 							button(type="submit").btn.btn-icon Отправить
 								i.fas.fa-caret-right
-					.form-group.agree-text.order-md-1
-							label(class="form-label")
-								input(class="form-checkbox" type="checkbox" name="agreePolitic")
-								span.custom-checkbox
-								| Принимаю  #[a(href="#") условия обработки] моих данных.

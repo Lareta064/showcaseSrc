@@ -1,0 +1,114 @@
+/* ==================== NEW MAIN HEADER ========================*/
+.header .title-1 {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 700;
+	font-size: 65px;
+	line-height: 1.18;
+	
+	color: #2E2E2E;
+}
+.header .text-20{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.54;
+	color: #3F3D56;
+	font-family: 'Montserrat', sans-serif;
+}
+.header .header-subtitle{
+	width:37ch;
+	margin-top: 13px;
+}
+.header-content{
+	height: 775px;
+	
+}
+.header .header-links{
+	margin-top: 60px;
+&> p{
+	margin-bottom: 20px;
+}
+}
+.header-link-block{
+	display: flex;
+}
+.header-text{
+	top: 50%;
+}
+.header-links__item{
+	
+	& +.header-links__item{margin-left: 46px;}
+	span{margin-bottom: 13px; height: 45px; display: inline-block;}
+	h4,p{
+		font-family: Montserrat;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #4A4A4A;
+	}
+	p{
+		font-weight: 400;
+	}
+}
+.header-links__item h4,
+.header-links__item svg path{
+	transition: .3s;
+}
+.header-links__item:hover svg path{
+	fill:#ee3264 ;
+}
+.header-links__item:hover h4{
+	opacity: .7;
+}
+@media(max-width:1599px){
+	.header{
+		height:885px;
+	}
+}
+@media(max-width:1439px){
+	.header{
+		height:885px;
+	}
+}
+@media(max-width:1364px){
+	.header{height:800px;}
+	.header-content{height:690px;}
+	.header .title-1{font-size: 55px;}
+}
+@media(max-width:1199px){
+	.header{height:750px;}
+	.header-content{height:640px;}
+	.header .title-1{font-size: 46px;}
+	.header .text-20{font-size: 18px;}
+	.header .header-image{
+		max-width:480px;
+		width: 50%;
+
+	}
+}
+@media (max-width: 991px){
+	.header .header-text{
+		top: 50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		max-width: 100%;
+		text-align: center;
+	}
+	.header .header-image{display: none;}
+	.header-link-block{justify-content: center;}
+	.header .header-subtitle{margin-left: auto;margin-right: auto;}
+	
+}
+@media (max-width: 767px){
+	.header .title-1{font-size: 36px;}
+	.header .text-20{font-size: 14px;}
+	.header{height:100vh;}
+	.header-content{height:calc(~'100vh - 100px')}
+	
+		
+	.header-links__item p{display: none;}
+}
+@media (max-width: 374px){
+	.header .title-1{font-size: 30px;}
+	.header .text-20{font-size: 12px;}
+}
+/* ==================== END MAIN HEADER ========================*/

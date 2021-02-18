@@ -1,0 +1,156 @@
+section.reviews
+	.container-medium
+		.bredcrb
+			a(href="index.html")
+					+iconHome
+			a(href="index.html") Главная
+			a(href="#") Отзывы
+			
+		.page-content
+			.reviews-box
+				.reviews-filters
+					p Сортировать:
+					.filters-btn
+						// ========== FILTER 1 ==========
+						button.active
+							span По цене
+							span
+								// ========== SVG ICON ==========
+								+sort1
+								// ========== END  SVG ICON ==========
+						
+						// ========== FILTER 2 ==========
+						button
+							span По дате
+							span
+								// ========== SVG ICON ==========
+								+sort2
+								// ========== END  SVG ICON ==========
+				// ========== one review ==========
+				.review-item
+					.review-author
+						.review-author__img
+							img(src="img/new/reviews/1.jpg", alt="img")
+						.review-author__name
+							p Дмитрий - ООО Смакбери / 16.04.2020
+					.review-stars
+						.stars-rank
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE PASSIVE STAR ==========
+							span
+								+star
+						.review-stars__comment
+							p Все понравилось
+					.review-text
+						p Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации существенных финансовых и административных условий.
+				// ========== one review ==========
+				.review-item
+					.review-author
+						.review-author__img
+							img(src="img/new/reviews/2.jpg", alt="img")
+						.review-author__name
+							p Алексей - Ресторан “Москва” / 16.04.2020
+					.review-stars
+						.stars-rank
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE PASSIVE STAR ==========
+							span.active
+								+star
+						.review-stars__comment
+							p Все понравилось
+					.review-text
+						p Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации существенных финансовых и административных условий.
+				// ========== one review ==========
+				.review-item
+					.review-author
+						.review-author__img
+							img(src="img/new/reviews/3.jpg", alt="img")
+						.review-author__name
+							p Елена - Пиццерия “Динопицца” / 16.04.2020
+					.review-stars
+						.stars-rank
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE PASSIVE STAR ==========
+							span.active
+								+star
+						.review-stars__comment
+							p Все понравилось
+					.review-text
+						p Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации существенных финансовых и административных условий.
+			.leave-review
+				h2 Оставить отзыв
+				form(action="#!").review-form
+					.leave-review__rank
+						p Ваша оценка:
+						.stars-rank
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span.active
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span
+								+star
+							//========== ONE ACTIVE STAR ==========
+							span
+								+star
+					.leave-review__form
+						.row
+							.col-xl-2
+								.review__form-avatar
+									.review__form-img(style="background-image: url(img/new/reviews/nofoto.jpg)")
+									p Загрузить фото или логотип компании
+							.col-xl-5
+								.form-field.h-68
+								input(type="text" name="userName" placeholder="Имя и название организации")
+							.col-xl-5
+								.form-field.h-68
+									input(type="text" name="userEmail" placeholder="Email (не публикуется)")
+							.col-12
+								.form-field.h-68
+									textarea(name="reviewText",  rows="3" placeholder="Текст отзыва")
+								.form-group.agree-text
+									label(class="form-label")
+										input(class="form-checkbox" type="checkbox" name="agreePolitic")
+										span.custom-checkbox
+										| Принимаю  #[a(href="#") условия обработки] моих данных.
+								.form-button
+									button(type="submit").btn.btn-icon Оставить отзыв
+										i.fas.fa-caret-right

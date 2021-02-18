@@ -1,9 +1,19 @@
 /*=======================NEW PROJECT PAGE ====================*/
 .mt-40{margin-top: 40px;}
 .mt-30{margin-top: 30px;}
+.pt-140{padding-top: 140px;}
+.medium-head {
+	font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+	font-size: 25px;
+	line-height: 1.28;
+	text-align: center;
+	color: #2E2E2E;
+}
 .project-inner .header{
 	position: relative;
 	background-color: #fff;
+	height: auto;
 	&:after{
 		content:'';
 		position: absolute;
@@ -44,6 +54,9 @@
 .project-header-center{
 	text-align: center;
 }
+.mockup-group{
+	margin-top: 90px;
+}
 .project-header__title .title-1{
 	max-width: 20ch;
 	margin-left: auto;
@@ -64,11 +77,113 @@
 .project-header-center{
 	margin-top: 100px;
 }
+.boldText p{
+	font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+	font-size: 32px;
+	line-height: 1.19;
+	color: #2E2E2E;
+}
+.light-text p{
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.5;
+	color: #2E2E2E;
+}
+/*========================= deskrip ==========================*/
+.project-page-deskrip{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	
+	.boldText{
+		width: 26%;
+		max-width:300px;
+		position: relative;
+		&:after{
+			content:'';
+			width: 25px;
+			height: 3px;
+			background-color: #000;
+			position: absolute;
+			right: -60px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	.light-text{
+		width: 66%;
+		max-width:770px;
+	}
+
+}
+/*========================= possibility ==========================*/
+.project-possibility.pt-140{
+	.medium-head{
+		max-width:850px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+}
+.possibl-card{
+	width: 100%;
+	height: 275px;
+	border: 2px solid red;
+	transition: .5s;
+	cursor:pointer;
+}
+.text-basic{
+	p{
+		font-family: Montserrat;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #4A4A4A;
+	}
+}
+.possibl-card{
+	padding: 40px;
+	margin-bottom: 30px;
+	.text-basic{
+		padding-right: 37px;
+		padding-top: 22px;
+	}
+}
+.possibl-card__top{
+	display: flex;
+	justify-content: space-between;
+}
+.possibl-card h4{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.62;
+	color: #4A4A4A;
+}
+.possibl-card .possibl-card__icon{
+	width: 60px;
+	height: 60px;
+	border:1px solid red;
+}
+/*========================= MEDIA ==========================*/				
 @media(max-width:1199px){
 	.project-header__title p{font-size: 14px; max-width:730px;}
 	.project-header-center {
 		margin-top: 70px;
 	}
+	.project-inner .header:after{height: 800px;}
+	.project-page-deskrip .boldText:after{right: -20px;}
+	.boldText p{font-size: 26px;}
+	.light-text p{font-size: 16px;}
+}
+@media(max-width:991px){
+	.project-inner .header:after{height: 750px;}
+	.project-page-deskrip .boldText{width: 35%;}
+	.project-page-deskrip .light-text{width: 60%;}
+
+
 
 }
 @media(max-width:767px){
@@ -79,8 +194,31 @@
 		margin-right: auto;
 		justify-content: space-between;
 	}
+	.project-inner .header:after{height: 620px;}
 	.btn-box--center .btn.w-300{width: 49%; max-width:300px; }
 	.btn-box--center .btn.w-300{font-size: 14px; line-height: 48px;}
 	.btn-box--center .btn + .btn {margin-left: unset;}
+	.project-page-deskrip{
+		max-width:500px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		flex-direction: column;
+		.boldText,.light-text{
+			width: 100%;
+			max-width: unset;
+		}
+		.boldText{
+			margin-bottom: 20px;
+			&:after{display: none;}
+		}
+	}
+	.boldText p{font-size: 26px;}
+	.light-text p{font-size: 16px;}
+}
+
+
+@media(max-width:579px){
+	.project-inner .header:after{height: 570px;}
 }
 /*=======================END NEW PROJECT PAGE ====================*/

@@ -1,15 +1,33 @@
 /*=======================NEW PROJECT PAGE ====================*/
 .mt-40{margin-top: 40px;}
 .mt-30{margin-top: 30px;}
+.project-inner .header{
+	position: relative;
+	background-color: #fff;
+	&:after{
+		content:'';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 870px;
+		background-color: #F3FBF9;
+		z-index: 1;
+	}
+	.header-wrapper{
+		position: relative;
+		z-index: 2;}
+}
 .btn-box--center{
 	justify-content: center;
 
 	.btn.w-300{
 		width: 300px; 
 		color: #fff; 
-		line-height: 56px;
+		line-height: 66px;
 		font-family: 'Montserrat', sans-serif;
-
+		padding-top: 0;
+		padding-bottom: 0;
 		font-weight: 500;
 		font-size: 18px;
 	}
@@ -27,7 +45,7 @@
 	text-align: center;
 }
 .project-header__title .title-1{
-	width: 20ch;
+	max-width: 20ch;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -45,5 +63,24 @@
 }
 .project-header-center{
 	margin-top: 100px;
+}
+@media(max-width:1199px){
+	.project-header__title p{font-size: 14px; max-width:730px;}
+	.project-header-center {
+		margin-top: 70px;
+	}
+
+}
+@media(max-width:767px){
+		.btn-box--center{
+		width: 100%;
+		max-width:630px;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-between;
+	}
+	.btn-box--center .btn.w-300{width: 49%; max-width:300px; }
+	.btn-box--center .btn.w-300{font-size: 14px; line-height: 48px;}
+	.btn-box--center .btn + .btn {margin-left: unset;}
 }
 /*=======================END NEW PROJECT PAGE ====================*/

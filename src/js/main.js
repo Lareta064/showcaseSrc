@@ -1,8 +1,5 @@
 $(document).ready(function () {
 	
-	// console.log('');
-	
-	
 		$(function(){
 			const card = $('.possibl-card');
 			
@@ -36,7 +33,21 @@ $(document).ready(function () {
 				return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 			}
 		
-	})
+	});
+	const possiblShowBtn = document.querySelector('#show-possibDesk-btn');
+	const possiblHideBtn = document.querySelector('#hide-possiblDesk-btn')
+	
+	const possibilityText = document.querySelector('#possibility-text');
+	const possibilityCards = document.querySelector('#possibility-cards');
+	
+	possiblShowBtn. addEventListener('click', function(){
+		possibilityText.classList.add('active');
+		possibilityCards.classList.add('hide');
+	});
+	possiblHideBtn. addEventListener('click', function(){
+		possibilityText.classList.remove('active');
+		possibilityCards.classList.remove('hide');
+	});
 	// // ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
 	// window.addEventListener('scroll', function () {
 	// 	const fixMenu = document.querySelector('.header-fix');

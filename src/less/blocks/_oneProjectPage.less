@@ -119,6 +119,9 @@
 
 }
 /*========================= possibility ==========================*/
+.project-possibility-cards {
+	width: 100%;
+}
 .project-possibility.pt-140{
 	.medium-head{
 		max-width:850px;
@@ -130,9 +133,13 @@
 .possibl-card{
 	width: 100%;
 	height: 275px;
-	border: 2px solid red;
+	background: #FFFFFF;
+	border: 1px solid #8799A3;
 	transition: .5s;
-	cursor:pointer;
+	&:hover{
+		background: #F7F8FA;
+	}
+	
 }
 .text-basic{
 	p{
@@ -146,11 +153,16 @@
 .possibl-card{
 	padding: 40px;
 	margin-bottom: 30px;
+	max-width:370px;
+	margin-left: auto;
+	margin-right: auto;
 	.text-basic{
 		padding-right: 37px;
 		padding-top: 22px;
 	}
 }
+.col-md-8 .possibl-card{max-width:770px;}
+.col-md-8 .possibl-card p{max-width:302px;}
 .possibl-card__top{
 	display: flex;
 	justify-content: space-between;
@@ -161,11 +173,45 @@
 	font-size: 16px;
 	line-height: 1.62;
 	color: #4A4A4A;
+	width: 150px;
 }
-.possibl-card .possibl-card__icon{
-	width: 60px;
-	height: 60px;
-	border:1px solid red;
+.project-possibility-content{position: relative; }
+.project-possibility-text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	transform:   scale(0);
+	transition:.5s;
+	background-color: #fff;z-index: 3;
+	opacity: 0;
+}
+.project-possibility-cards{
+	position: relative;
+	transition: opacity .5s;
+	z-index:2;
+}
+.project-possibility-cards.hide{
+	opacity: 0;
+}
+.project-possibility-text.active{
+	opacity: 1;
+	transform:  scale(1);
+}
+.possibility-btn{
+	
+	margin-left: auto;
+	width: fit-content;
+	cursor:pointer;
+	color: #8799A3;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 26px;
+	margin-top: -10px;
+}
+.possibility-btn:hover{
+	color:rgb(61, 190, 227) ;
 }
 /*========================= MEDIA ==========================*/				
 @media(max-width:1199px){
@@ -177,6 +223,15 @@
 	.project-page-deskrip .boldText:after{right: -20px;}
 	.boldText p{font-size: 26px;}
 	.light-text p{font-size: 16px;}
+
+	.possibl-card{padding: 15px;}
+	.possibl-card .text-basic{padding-right: 0;}
+	.possibl-card__icon{
+		max-width:45px;
+		svg{
+			max-width:100%;
+		}
+	}
 }
 @media(max-width:991px){
 	.project-inner .header:after{height: 750px;}
@@ -215,10 +270,19 @@
 	}
 	.boldText p{font-size: 26px;}
 	.light-text p{font-size: 16px;}
+	.possibl-card__icon{max-width:unset;}
+	.possibl-card{padding: 30px;}
+	.possibl-card .text-basic{padding-right: 15px;}
+	.col-md-8 .possibl-card{max-width:370px;}
+		
 }
 
 
 @media(max-width:579px){
 	.project-inner .header:after{height: 570px;}
+	.possibl-card__icon{max-width:45px;}
+	.possibl-card{padding: 10px;}
+	.possibl-card .text-basic{padding-right: 0;}
+
 }
 /*=======================END NEW PROJECT PAGE ====================*/

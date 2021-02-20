@@ -424,6 +424,64 @@
 }
 /*=======================СЛАЙДЕР ПРОЕКТА =================*/
 .project-carousel{padding-bottom: 140px;}
+.project-carousel-title{
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 50px;
+	@media(max-width:424px){
+		flex-direction: column;
+		align-items: flex-start;
+		.project-carousel-arrow{
+			margin-top: 20px;
+			align-self: flex-end;
+		}
+	}
+
+}
+.project-carousel-arrow{
+	margin-left: 60px;
+	display: flex;
+	.project-carousel-arrow__right, .project-carousel-arrow__left{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		text-align: center;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		line-height: 28px;
+		font-size: 12px;
+		border: 1px solid #ee3264;
+		padding: 0;
+		background-color: #ee3264;
+		color: #fff;
+		display: inline-block;
+		outline: none !important;
+		-webkit-transition: .3s;
+		-o-transition: .3s;
+		transition: .3s;
+		cursor:pointer;
+	}
+}
+.project-carousel-arrow .project-carousel-arrow__right{
+  margin-left: 10px;
+}
+.project-carousel-arrow .project-carousel-arrow__left:hover,
+ .project-carousel-arrow .project-carousel-arrow__right:hover{
+  background-color: #fff;
+  color: #ee3264;
+}
+.project-carousel-arrow__right i {
+  position: relative;
+  left: 1px;
+}
+.project-carousel-arrow__left i {
+  position: relative;
+  right: 1px;
+}
 .project-carousel-wrapper .owl-dots{
 	display: flex;
 	justify-content: center;
@@ -472,10 +530,15 @@
 	flex-direction: column;
 	.project-carousel__icon{
 		margin-bottom: 70px;
-		@media(max-width:767px){
-			width: 120px;
+		@media(max-width:1199px){
+			width: 140px;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 20px;
+		}
+		@media(max-width:767px){
+			width: 120px;
+			
 			margin-top: 40px;
 		}
 	}
@@ -535,6 +598,18 @@
 			max-width:100%;
 		}
 	}
+	.project-carousel-text{
+		margin-bottom: 40px;
+	}
+	.options-card .options-card-body {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.options-card-light{
+		margin-left: 0;
+		padding-left: 40px;
+		padding-right: 20px;
+	}
 }
 @media(max-width:991px){
 	.project-inner .header:after{height: 750px;}
@@ -545,6 +620,15 @@
 			width: 100%;
 	}
 	.project-benefits-content .content-column + .content-column{margin-top: 30px;}
+	.options-card .options-card-body {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.options-card-light{
+		margin-left: 0;
+		padding-left: 30px;
+		padding-right: 20px;
+	}
 
 }
 @media(max-width:767px){
@@ -636,6 +720,12 @@
 		.oldprice{font-size: 18px; line-height: 24px; margin-left: 20px;}
 	}
 	.project-carousel__desk{display: none;}
+	.project-carousel-text{margin-left: auto; margin-right: auto;}
+	.project-carousel-img{
+		max-width:500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 @media(max-width:579px){
 	.project-inner .header:after{height: 570px;}

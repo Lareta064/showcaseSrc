@@ -59,6 +59,13 @@ $(document).ready(function () {
 		animateOut: 'fadeOut',
 		margin:15
 	});
+	$('.project-carousel-arrow__left').click(function () {
+		$('.project-carousel-wrapper').trigger("next.owl.carousel")
+	});
+	$('.project-carousel-arrow__right').click(function () {
+		$('.project-carousel-wrapper').trigger("prev.owl.carousel")
+	});
+
 	// ====== ЭФФЕКТ ДО/ПОСЛЕ ======
 	$("#beforeAfter-container").twentytwenty({
 		before_label: '',

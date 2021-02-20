@@ -31,10 +31,7 @@
 		position: relative;
 		z-index: 2;}
 }
-.btn-box--center{
-	justify-content: center;
-
-	.btn.w-300{
+.btn.w-300{
 		width: 300px; 
 		color: #fff; 
 		line-height: 66px;
@@ -44,6 +41,10 @@
 		font-weight: 500;
 		font-size: 18px;
 	}
+.btn-box--center{
+	justify-content: center;
+
+
 	.btn.btn--light.w-300{color: #3DBEE3;}
 	.btn.w-300:hover{
 		color: #fff;
@@ -578,6 +579,42 @@
 	background-color:  #F7F8FA;
 	height: 28.5%;
 
+}
+/*==========================project feedback================*/
+.project-feedback{
+	background: #F3F9FC;
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.project-feedback-content{
+	display: flex;
+	align-items: center;
+}
+.project-feedback-form{
+	width: 49%;
+	max-width:470px;
+	@media(max-width:767px){
+		width: 100%;
+		.btn-box--center .btn.w-300{width: 100%; max-width:300px;}
+	}
+}
+.project-feedback-img{
+	width: 670px;
+	margin-left: 30px;
+	@media(max-width:1199px){
+		width: 90%;
+	}
+	@media(max-width:767px){
+		display: none;
+	}
+}
+.project-feedback-titleGroup {margin-bottom: 24px;}
+.project-feedback-form .contact-form .form-field{margin-bottom: 20px;}
+.project-feedback-titleGroup .basic-text{margin-top: 10px; max-width:400px;}
+.project-feedback-block .form-field input{
+	border: 1px solid #E6E6E6;
+	background-color: #fff;
+	&::placeholder{font-size: 13px;}
 }
 /*========================= MEDIA ==========================*/				
 @media(max-width:1199px){

@@ -326,6 +326,7 @@
 }
 .project-options-columns{
 	display: flex;
+	justify-content: center;
 	
 	margin-top: 50px;
 }
@@ -481,6 +482,39 @@
 	.project-carousel__btn{
 		margin-top: auto;
 	}
+}
+.project-beforeAfter .twentytwenty-horizontal .twentytwenty-handle:before{
+	box-shadow: none;background-color: #ee3264;width:4px;}
+.project-beforeAfter .twentytwenty-horizontal .twentytwenty-handle:after{background-color: #ee3264;}
+.project-beforeAfter  .twentytwenty-handle{border-color: #ee3264;background-color: #ee3264;}
+ .project-beforeAfter .twentytwenty-right-arrow{border-left-color: #fff;}
+ .project-beforeAfter .twentytwenty-left-arrow {border-right-color: #fff;}
+ 
+//=========================VIDEO ===========================
+.projectVideo-wrapper{
+	padding-top: 140px;
+	text-align: center;
+	position: relative;
+	.project-video{
+		width: 100%;
+		max-width: 830px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		z-index: 2;
+		// box-shadow: 0px 4px 100px rgba(103, 136, 198, 0.31);
+	}
+	.project-video__title{margin-bottom: 50px;}
+}
+.projectVideo-wrapper:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color:  #F7F8FA;
+	height: 28.5%;
+
 }
 /*========================= MEDIA ==========================*/				
 @media(max-width:1199px){

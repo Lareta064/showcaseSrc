@@ -48,7 +48,7 @@ $(document).ready(function () {
 		possibilityText.classList.remove('active');
 		possibilityCards.classList.remove('hide');
 	});
-
+	// ====== СЛАЙДЕР ПРОЕКТА ========
 	$('.project-carousel-wrapper').owlCarousel({
 		items: 1,
 		autoplay: true,
@@ -58,7 +58,13 @@ $(document).ready(function () {
 		loop: true,
 		animateOut: 'fadeOut',
 		margin:15
-	})
+	});
+	// ====== ЭФФЕКТ ДО/ПОСЛЕ ======
+	$("#beforeAfter-container").twentytwenty({
+		before_label: '',
+        after_label: ''
+	});
+
 	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
 	window.addEventListener('scroll', function () {
 		const fixMenu = document.querySelector('.header-fix');

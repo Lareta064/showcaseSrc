@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	
+	console.log('lol');
 		$(function(){
 			const card = $('.possibl-card');
 			
@@ -74,6 +74,7 @@ $(document).ready(function () {
 
 	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
 	window.addEventListener('scroll', function () {
+		console.log('555');
 		const fixMenu = document.querySelector('.header-fix');
 		if (this.pageYOffset > 100) {
 			fixMenu.classList.add('active')

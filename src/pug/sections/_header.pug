@@ -6,7 +6,24 @@
 					+logo
 				.header-tel
 					a(href="#!") +7 (908) 547-50-78
+			
 			.header-top__col
+				// Кнопка Каталог в фиксирующейся шапке
+				button.catalogy-btn.catalogy-btn-desktop(type='button')
+					span.catalogy-btn-icon
+						svg.svg-burger(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none')
+							path(fill-rule='evenodd' clip-rule='evenodd' d='M14 3H5V4H14V3ZM14 12H5V13H14V12ZM5 7.5H14V8.5H5V7.5ZM3 7.5H2V8.5H3V7.5ZM2 3H3V4H2V3ZM3 12H2V13H3V12Z' fill='white')
+							mask#mask0_1803_49205(style='mask-type:luminance' maskUnits='userSpaceOnUse' x='2' y='3' width='12' height='10')
+								path(fill-rule='evenodd' clip-rule='evenodd' d='M14 3H5V4H14V3ZM14 12H5V13H14V12ZM5 7.5H14V8.5H5V7.5ZM3 7.5H2V8.5H3V7.5ZM2 3H3V4H2V3ZM3 12H2V13H3V12Z' fill='white')
+							g(mask='url(#mask0_1803_49205)')
+						svg.svg-close(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none')
+							path(fill-rule='evenodd' clip-rule='evenodd' d='M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z' fill='white')
+							mask#mask0_1849_7984(style='mask-type:luminance' maskUnits='userSpaceOnUse' x='4' y='4' width='8' height='8')
+								path(fill-rule='evenodd' clip-rule='evenodd' d='M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z' fill='white')
+							g(mask='url(#mask0_1849_7984)')
+					span Каталог сайтов
+			
+
 				nav.nav-menu
 					a(href="#!") Готовые сайты
 					a(href="#!") Отзывы
@@ -27,13 +44,419 @@
 .mobile-phone
 	.header-tel
 		a(href="#!") +7 (908) 547-50-78
+
+// Большой Каталог
+#header-catalogy.header-catalogy-wrapper
+	.header-catalogy
+		.catalog-menu-drop
+			.catalog-mobile-header
+				button Назад
+				.catalog-title Категории
+			ul.scroll-y
+				// Мебель
+				li
+					a(href='#!')
+						img(src='./img/categories-img/mebel.png' width='28' height='22' alt='icon')
+						span Мебель
+					// ==== меню Уровень #2 =====
+					.catalog-menu-submenu
+						ul.scroll-y
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/cveti-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки цветов1
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/dostavkai-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки обедов
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/product-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+				// Фото
+				li
+					a(href='#!')
+						img(src='./img/categories-img/foto.png' width='28' height='22' alt='icon')
+						span Фотография
+					// ==== меню Уровень #2 =====
+					.catalog-menu-submenu
+						ul.scroll-y
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/foto-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Сайт фотографа
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/pizza-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт мебели2
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/dostavka2-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/foto-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Сайт фотографа
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/pizza-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт мебели
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/dostavka2-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+				// Цветы
+				li
+					a(href='#!')
+						img(src='./img/categories-img/cveti.png' width='28' height='22' alt='icon')
+						span Цветы
+					// ==== меню Уровень #2 =====
+					.catalog-menu-submenu
+						ul.scroll-y
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/cveti-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки цветов3
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/dostavka2-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки обедов
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/foto-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+				// Юрист
+				li
+					a(href='#!')
+						img(src='./img/categories-img/urist.png' width='28' height='22' alt='icon')
+						span Юристпруденция
+					// ==== меню Уровень #2 =====
+					.catalog-menu-submenu
+						ul.scroll-y
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/urist1-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки цветов4
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/urist2-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки обедов
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/product-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+				// Перевозки
+				li
+					a(href='#!')
+						img(src='./img/categories-img/perevozki.png' width='28' height='22' alt='icon')
+						span Перевозки
+					// ==== меню Уровень #2 =====
+					.catalog-menu-submenu
+						ul.scroll-y
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/cveti-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки цветов5
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/dostavka2-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки обедов
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/urist1-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+				// Продукты
+				li
+					a(href='#!')
+						img(src='./img/categories-img/product.png' width='28' height='22' alt='icon')
+						span Продукты питания
+					// ==== меню Уровень #2 =====
+					.catalog-menu-submenu
+						ul.scroll-y
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/pizza-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки цветов6
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/product-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки обедов
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/cveti-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+				// Доставка
+				li
+					a(href='#!')
+						img(src='./img/categories-img/dostavka.png' width='28' height='22' alt='icon')
+						span Доставка
+					// ==== меню Уровень #2 =====
+					.catalog-menu-submenu
+						ul.scroll-y
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/cveti-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки цветов7
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 50 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/dostavkai-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки обедов
+								.product-preview__col
+									.price-medium
+										.price-new 12 000 руб
+										.price-old 45 000руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+							// карточка-строка одного товара
+							li.product-preview
+								.product-preview__img
+									img(src='./img/categories-img/product-poster.png' width='176' height='110' alt='img')
+								.product-preview__title
+									p Готовый сайт доставки продуктов
+								.product-preview__col
+									.price-medium
+										.price-new 6 000 руб
+										.price-old 40 000 руб
+									a.btn-flex(href='#!')
+										span Подробнее
+										svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+											path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+
+
+
+
+
 header.header
 	.container-fluid
 		+headerNav
 	.container.container--rel
 		.header-content
 			.header-text
-				h1.title-1(data-aos="zoom-up" data-aos-duration='800' data-aos-delay='500') Продаем готовые <br> сайты "под ключ"
+				h1.title-1 Продаем готовые <br> сайты "под ключ"
 				p.header-subtitle.text-20 для Юристов и Адвокатов, Фотографов, Доставки еды и обедов, Пиццы и Роллов, Флористов и магазинов Цветов
 				// ======links block ===========
 				.header-links
@@ -88,7 +511,7 @@ header.header
 					.header-image
 						.parallax-item
 							img(src="img/layout1.png", alt="img" data-aos="fade-down" data-aos-duration='500' data-aos-delay='1000')
-						img(src="img/main.png", alt="img" data-aos="fade-up" data-aos-duration='500')
+						img(src="img/main.png", alt="img" )
 	
 	//МОДАЛЬНОЕ ОКНО ПОИСКА
 	.abs-wrapper.search-modal#search-modal

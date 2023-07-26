@@ -1,0 +1,569 @@
+/*CHECKOUT */
+.btn:focus {
+	box-shadow: none;
+}
+
+.checkout {
+	padding-bottom: 140px;
+
+	.form-btn.form-btn--short {
+		.btn--light {
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 245px;
+		}
+
+	}
+
+	.contact-form {
+		.form-field {
+			margin-bottom: 20px;
+
+			textarea {
+				height: 108px;
+			}
+		}
+
+		.checkout-box .form-field {
+			margin-bottom: 17px;
+		}
+
+		.form-field.h-68 {
+			input {
+				height: 68px;
+				font-size: 13px;
+
+				&::placeholder {
+					color: #C7CCCF;
+					font-size: 13px;
+				}
+			}
+
+			textarea {
+				font-size: 13px;
+				line-height: 23px;
+
+				&::placeholder {
+					color: #C7CCCF;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+	.block-title {
+		margin-bottom: 30px;
+
+		h3 {
+			font-size: 25px;
+			line-height: 35px;
+		}
+	}
+
+	.user-info-wrapper {
+		@media(max-width:767px) {
+			.form-btn.form-btn--short {
+				text-align: center;
+			}
+
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.form-field input[type="radio"] {
+
+	position: relative;
+	height: 14px;
+	width: 14px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	background-color: #fff;
+	border: 0px;
+	padding-left: 0;
+	margin-right: 5px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		border: 1px solid #3DBEE3;
+	}
+
+	&:checked::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #3DBEE3;
+		transform: translate(-50%, -50%);
+		visibility: visible;
+	}
+
+}
+
+.form-field {
+
+	label {
+		display: flex;
+		align-items: center;
+
+	}
+}
+
+.checkbox-drop {
+	display: none;
+	padding-left: 25px;
+	padding-top: 5px;
+
+	p {
+		font-size: 14px;
+		line-height: 17px;
+		color: #2e2e2e;
+	}
+
+	@media(max-width:424px) {
+		padding-left: 0;
+	}
+}
+
+.checkbox-drop .info {
+	p {
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 500;
+	}
+
+	span {
+		font-size: 12px;
+		line-height: 15px;
+		color: #8799A3;
+	}
+}
+
+.form-field input[type="radio"]:checked+.checkbox-drop {
+	display: block;
+}
+
+.form-field.form-field--drop {
+
+	input[type="radio"],
+	label {
+		display: inline;
+	}
+}
+
+.checkout-box {
+
+	label {
+		font-size: 14px;
+		line-height: 17px;
+		vertical-align: middle;
+		position: relative;
+		margin-bottom: 0;
+
+	}
+
+	input {
+		position: relative;
+		top: -1px;
+	}
+}
+
+.select-file {
+	display: flex;
+
+	label.form-label {
+		cursor: pointer;
+	}
+
+
+	&:hover {
+		opacity: .7;
+	}
+
+	span {
+		color: #EE3264;
+	}
+
+	.link-icon {
+		color: #EE3264;
+		font-size: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	input.inputfile {
+		width: 0.1px;
+		height: 0.1px;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+
+	}
+
+	.inputfile+label {
+		display: inline-block;
+		background-color: transparent;
+		color: $title;
+		font-size: 12px;
+		border-radius: 4px;
+		padding: 12px;
+
+	}
+
+	.inputfile:focus+label,
+	.inputfile+label:hover {
+		background-color: transparent;
+		color: red;
+	}
+}
+
+.form-group input[type='checkbox'] {
+	width: 0.01px;
+	height: 0.1px;
+	border: 0px;
+	padding: 0;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.form-group .fake-placeholder {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	font-size: 13px;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	pointer-events: none;
+	color: #A3A7B4;
+}
+
+.fake-placeholder.pl-20 {
+	padding-left: 22px;
+}
+
+
+
+.form-checkbox {
+	width: 0.01px !important;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.custom-checkbox {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #3DBEE3;
+	margin-right: 10px;
+	position: relative;
+	background-color: transparent;
+}
+
+.custom-checkbox:after {
+	content: '';
+	width: 6px;
+	height: 16px;
+	border-bottom: 1.5px solid #3DBEE3;
+	border-right: 1.5px solid #3DBEE3;
+	position: absolute;
+	top: -90%;
+	left: 45%;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	z-index: -1;
+	opacity: 0;
+}
+
+.form-checkbox:checked+.custom-checkbox:after {
+	z-index: 2;
+	opacity: 1;
+	top: -70%;
+}
+
+form .agree-text {
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+}
+
+form .agree-text a {
+	color: #3DBEE3;
+	border-bottom: 1px solid #3DBEE3;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+form .agree-text a:hover {
+	opacity: .5;
+}
+
+.checkout-form__footer {
+	padding-top: 35px;
+	margin-top: 35px;
+	border-top: 1px solid #F0F0F0;
+	display: flex;
+	justify-content: space-between;
+
+	@media(max-width:991px) {
+		flex-direction: column;
+		padding-top: 30px;
+		margin-top: 20px;
+	}
+
+	label {
+		margin-bottom: 0;
+	}
+
+	.form-group {
+		margin-bottom: 0;
+	}
+
+	.form-group.agree-text {
+		display: flex;
+		align-items: center;
+
+		@media(max-width:991px) {
+			margin-bottom: 10px;
+		}
+
+		@media(max-width:767px) {
+			margin-bottom: 0;
+		}
+	}
+
+
+	.total-summ {
+		font-size: 25px;
+		line-height: 35px;
+		font-weight: 700;
+		font-family: Rubik;
+		padding-left: 15px;
+
+		@media(max-width:1199px) {
+			padding-left: 0;
+		}
+
+
+	}
+
+	.checkout-form-send {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media(max-width:991px) {
+			width: 100%;
+		}
+
+		@media(max-width:579px) {
+			display: block;
+		}
+	}
+
+	.btn.btn-icon {
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 220px;
+
+		@media(max-width:767px) {
+			margin-bottom: 10px;
+			margin-top: 20px;
+		}
+	}
+}
+
+/* Базовый контейнер табов */
+.tabs {
+
+	padding: 10px 0px 0px;
+	margin: 0 auto;
+}
+
+/* Стили секций с содержанием */
+.tabs>article {
+	display: none;
+	padding: 0;
+	background: #fff;
+	border-top: 1px solid #2E2E2E;
+}
+
+.tabs>article>form {
+	margin: 0 0 5px;
+	line-height: 1.5;
+	color: #383838;
+	/* прикрутим анимацию */
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+/* Описываем анимацию свойства opacity */
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* Прячем чекбоксы */
+.tabs>input {
+	display: none !important;
+	position: absolute;
+}
+
+/* Стили переключателей вкладок (табов) */
+.tabs>label {
+	display: inline-block !important;
+	margin: 0 0 -1px;
+	padding: 6px 0px;
+	font-weight: 600;
+	text-align: center;
+	color: #8799A3;
+	border-bottom: 3px solid transparent;
+	position: relative;
+	top: 1.5px;
+
+	&:first-of-type {
+		margin-right: 80px;
+
+		@media(max-width:991px) {
+			margin-right: 40px;
+		}
+
+		@media(max-width:424px) {
+			margin-right: 12px;
+		}
+	}
+
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+
+.tabs>label:hover {
+	color: #888;
+	cursor: pointer;
+}
+
+/* Стили для активной вкладки */
+.tabs>input:checked+label {
+	color: #2e2e2e;
+	// border-top: 1px solid #009933;
+	border-bottom: 3px solid #EE3264;
+
+	background: #fff;
+}
+
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked~#content-tab1,
+#tab2:checked~#content-tab2 {
+	display: block;
+}
+
+
+/*payment-details*/
+.payment-details {
+	padding-top: 10px;
+}
+
+.payment-details .form-group {
+	position: relative;
+	margin-bottom: 11px;
+}
+
+.payment-details .form-group input {
+	background-color: transparent;
+	border: 0px;
+	border-radius: 0;
+	height: 27px;
+	font-size: 12px;
+	line-height: 15px;
+	color: #A3A7B4;
+	border-bottom: 1px solid #F0F0F0;
+	padding-left: 0;
+
+	&::placeholder {
+		font-size: 12px;
+		line-height: 15px;
+		color: #A3A7B4;
+		font-family: Montserrat;
+	}
+}
+
+.payment-details .form-group.error input {
+	border-color: #d7001a;
+}
+
+.payment-details .form-group .error-text {
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	display: none;
+}
+
+.payment-details .form-group.error .error-text {
+	display: block;
+	color: #d7001a;
+	font-size: 8px;
+	line-height: 10px;
+	padding-top: 3px;
+}
+
+.payment-details .form-group .error-notify {
+	position: absolute;
+	display: block;
+	right: 10px;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	background: url(../img/warning.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: none;
+}
+
+.payment-details .form-group.error .error-notify {
+	display: block;
+}
+
+#content-tab2 {
+	padding-top: 8px;
+}
+
+/*//CHECKOUT */

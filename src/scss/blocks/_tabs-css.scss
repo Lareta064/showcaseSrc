@@ -1,0 +1,174 @@
+/* Базовый контейнер табов */
+.tabs {
+
+	padding: 10px 0px 0px;
+	margin: 0 auto;
+}
+
+/* Стили секций с содержанием */
+.tabs>article {
+	display: none;
+	padding: 0;
+	background: #fff;
+	border-top: 1px solid #2E2E2E;
+}
+
+.tabs>article>form {
+	margin: 0 0 5px;
+	line-height: 1.5;
+	color: #383838;
+	/* прикрутим анимацию */
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+/* Описываем анимацию свойства opacity */
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* Прячем чекбоксы */
+.tabs>input {
+	display: none !important;
+	position: absolute;
+}
+
+/* Стили переключателей вкладок (табов) */
+.tabs>label {
+	display: inline-block !important;
+	margin: 0 0 -1px;
+	padding: 6px 0px;
+	font-weight: 600;
+	text-align: center;
+	color: #8799A3;
+	border-bottom: 3px solid transparent;
+	position: relative;
+	top: 1.5px;
+
+	&:first-of-type {
+		margin-right: 80px;
+
+		@media(max-width:991px) {
+			margin-right: 40px;
+		}
+
+		@media(max-width:424px) {
+			margin-right: 12px;
+		}
+	}
+
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+
+.tabs>label:hover {
+	color: #888;
+	cursor: pointer;
+}
+
+/* Стили для активной вкладки */
+.tabs>input:checked+label {
+	color: #2e2e2e;
+	// border-top: 1px solid #009933;
+	border-bottom: 3px solid #EE3264;
+
+	background: #fff;
+}
+
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked~#content-tab1,
+#tab2:checked~#content-tab2 {
+	display: block;
+}
+
+
+/*payment-details*/
+.payment-details {
+	padding-top: 10px;
+}
+
+.payment-details .form-group {
+	position: relative;
+	margin-bottom: 11px;
+}
+
+.payment-details .form-group input {
+	background-color: transparent;
+	border: 0px;
+	border-radius: 0;
+	height: 27px;
+	font-size: 12px;
+	line-height: 15px;
+	color: #A3A7B4;
+	border-bottom: 1px solid #F0F0F0;
+	padding-left: 0;
+
+	&::placeholder {
+		font-size: 12px;
+		line-height: 15px;
+		color: #A3A7B4;
+		font-family: Montserrat;
+	}
+}
+
+.payment-details .form-group.error input {
+	border-color: #d7001a;
+}
+
+.payment-details .form-group .error-text {
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	display: none;
+}
+
+.payment-details .form-group.error .error-text {
+	display: block;
+	color: #d7001a;
+	font-size: 8px;
+	line-height: 10px;
+	padding-top: 3px;
+}
+
+.payment-details .form-group .error-notify {
+	position: absolute;
+	display: block;
+	right: 10px;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	background: url(../img/warning.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: none;
+}
+
+.payment-details .form-group.error .error-notify {
+	display: block;
+}
+
+#content-tab2 {
+	padding-top: 8px;
+}

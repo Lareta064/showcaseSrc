@@ -1,6 +1,29 @@
 $(document).ready(function () {
-	console.log('lol');
-		$(function(){
+	/*  header category menu*/
+	const bodyEl = document.querySelector('body');
+	const catMenuBtns = document.querySelectorAll('.catalogy-btn-desktop');
+	const headerCatMenu = document.getElementById('header-catalogy');
+	if (catMenuBtns.length > 0) {
+
+		for (let item of catMenuBtns) {
+			item.addEventListener('click', function () {
+				if (!item.classList.contains('active')) {
+
+					for (let i = 0; i < catMenuBtns.length; i++) catMenuBtns[i].classList.add('active');
+					headerCatMenu.classList.add('active');
+					bodyEl.classList.add('lock');
+
+				} else {
+					for (let i = 0; i < catMenuBtns.length; i++) catMenuBtns[i].classList.remove('active');
+					headerCatMenu.classList.remove('active');
+					bodyEl.classList.remove('lock');
+				}
+			})
+		}
+	}
+		
+	
+	$(function(){
 			const card = $('.possibl-card');
 			
 			card.on('mousemove', function (e) {
@@ -34,20 +57,20 @@ $(document).ready(function () {
 			}
 		
 	});
-	const possiblShowBtn = document.querySelector('#show-possibDesk-btn');
-	const possiblHideBtn = document.querySelector('#hide-possiblDesk-btn')
+	// const possiblShowBtn = document.querySelector('#show-possibDesk-btn');
+	// const possiblHideBtn = document.querySelector('#hide-possiblDesk-btn')
 	
-	const possibilityText = document.querySelector('#possibility-text');
-	const possibilityCards = document.querySelector('#possibility-cards');
+	// const possibilityText = document.querySelector('#possibility-text');
+	// const possibilityCards = document.querySelector('#possibility-cards');
 	
-	possiblShowBtn. addEventListener('click', function(){
-		possibilityText.classList.add('active');
-		possibilityCards.classList.add('hide');
-	});
-	possiblHideBtn. addEventListener('click', function(){
-		possibilityText.classList.remove('active');
-		possibilityCards.classList.remove('hide');
-	});
+	// possiblShowBtn.addEventListener('click', function(){
+	// 	possibilityText.classList.add('active');
+	// 	possibilityCards.classList.add('hide');
+	// });
+	// possiblHideBtn.addEventListener('click', function(){
+	// 	possibilityText.classList.remove('active');
+	// 	possibilityCards.classList.remove('hide');
+	// });
 	// ====== СЛАЙДЕР ПРОЕКТА ========
 	$('.project-carousel-wrapper').owlCarousel({
 		items: 1,
@@ -74,12 +97,13 @@ $(document).ready(function () {
 
 	// ПОКАЗАТЬ ФИКС МЕНЮ НА Десктопах
 	window.addEventListener('scroll', function () {
-		console.log('555');
 		const fixMenu = document.querySelector('.header-fix');
 		if (this.pageYOffset > 100) {
-			fixMenu.classList.add('active')
+			fixMenu.classList.add('active');
+			headerCatMenu.classList.add('top-offset');
 		} else {
-			fixMenu.classList.remove('active')
+			fixMenu.classList.remove('active');
+			headerCatMenu.classList.remove('top-offset');
 		}
 	})
 	// показать скрыть модальные окна поиска и моб меню
@@ -357,5 +381,14 @@ $(document).ready(function () {
 			}
 		}
 
-	})
+	});
+	/*Показать/скрыть текст редактора*/
+	document.querySelector('#showDesk').addEventListener('click', function(){
+		document.querySelector('#transform-block').classList.add('transform-block--hide');
+		document.querySelector('#hide-deskription').classList.add('editor-text--visible');
+	});
+	document.querySelector('#hideDesk').addEventListener('click', function(){
+		document.querySelector('#transform-block').classList.remove('transform-block--hide');
+		document.querySelector('#hide-deskription').classList.remove('editor-text--visible');
+	});
 })

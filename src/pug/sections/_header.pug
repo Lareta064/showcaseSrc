@@ -49,8 +49,11 @@
 #header-catalogy.header-catalogy-wrapper
 	.header-catalogy
 		.catalog-menu-drop
+			//===== .catalog-mobile-header виден только для меню на моб версии и приоткрытии через пункт выпадающего меню через гамбургер  
 			.catalog-mobile-header
-				button.close-cat-menu Назад
+				button.close-catslider
+					i.fas.fa-chevron-left
+					span Назад
 				.catalog-title Категории
 			ul.scroll-y
 				// Мебель
@@ -60,9 +63,15 @@
 						span Мебель
 					// ==== меню Уровень #2 =====
 					.catalog-menu-submenu
+						//===== .catalog-mobile-header виден только для меню на моб версии и приоткрытии через пункт выпадающего меню через гамбургер
+						
 						.catalog-mobile-header
-							button.close-slide Назад
+							button.close-slide
+								i.fas.fa-chevron-left
+								span Назад
 							.catalog-title Мебель
+						
+						//====== список сайтов в виде карточек ======
 						ul.scroll-y
 							// карточка-строка одного товара
 							li.product-preview
@@ -113,6 +122,9 @@
 						span Фотография
 					// ==== меню Уровень #2 =====
 					.catalog-menu-submenu
+						.catalog-mobile-header
+							button.close-slide Назад
+							.catalog-title Фотография						
 						ul.scroll-y
 							// карточка-строка одного товара
 							li.product-preview
@@ -205,6 +217,9 @@
 						span Цветы
 					// ==== меню Уровень #2 =====
 					.catalog-menu-submenu
+						.catalog-mobile-header
+							button.close-slide Назад
+							.catalog-title Цветы						
 						ul.scroll-y
 							// карточка-строка одного товара
 							li.product-preview
@@ -252,9 +267,12 @@
 				li.catalogy-category
 					a(href='#!')
 						img(src='./img/categories-img/urist.png' width='28' height='22' alt='icon')
-						span Юристпруденция
+						span Юриспруденция
 					// ==== меню Уровень #2 =====
 					.catalog-menu-submenu
+						.catalog-mobile-header
+							button.close-slide Назад
+							.catalog-title Юриспруденция						
 						ul.scroll-y
 							// карточка-строка одного товара
 							li.product-preview
@@ -305,6 +323,9 @@
 						span Перевозки
 					// ==== меню Уровень #2 =====
 					.catalog-menu-submenu
+						.catalog-mobile-header
+							button.close-slide Назад
+							.catalog-title Перевозки					
 						ul.scroll-y
 							// карточка-строка одного товара
 							li.product-preview
@@ -355,6 +376,9 @@
 						span Продукты питания
 					// ==== меню Уровень #2 =====
 					.catalog-menu-submenu
+						.catalog-mobile-header
+							button.close-slide Назад
+							.catalog-title Продукты питания					
 						ul.scroll-y
 							// карточка-строка одного товара
 							li.product-preview
@@ -405,6 +429,9 @@
 						span Доставка
 					// ==== меню Уровень #2 =====
 					.catalog-menu-submenu
+						.catalog-mobile-header
+							button.close-slide Назад
+							.catalog-title Доставка	
 						ul.scroll-y
 							// карточка-строка одного товара
 							li.product-preview

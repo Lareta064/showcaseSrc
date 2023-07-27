@@ -5,6 +5,10 @@ $(document).ready(function () {
 	const headerCatMenu = document.getElementById('header-catalogy');
 	const catalogyCategory = document.querySelectorAll('.catalogy-category');
 	const showCatSlider = document.querySelectorAll('.show-catslider');
+	const closeCatSlider = document.querySelector('.close-catslider');
+	const closeCategoryList = document.querySelectorAll('.close-slide');
+
+	
 	
 	/* показать кат меню по клику на кнопку Каталог Сайтов */
 	if (catMenuBtns.length > 0) {
@@ -33,6 +37,8 @@ $(document).ready(function () {
 				e.stopPropagation();
 				headerCatMenu.classList.add('active');
 				headerCatMenu.classList.add('catslider');
+				bodyEl.classList.add('lock');
+
 			})
 		}
 	}
@@ -49,8 +55,29 @@ $(document).ready(function () {
 				item.querySelector('.catalog-menu-submenu').classList.add('active');
 			})
 		}
-	}	
-	
+	}
+	/*закрывает меню категорий по клику на кнопку НАЗАД */
+	if (closeCatSlider){
+		closeCatSlider.addEventListener('click', function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			headerCatMenu.classList.remove('active');
+			headerCatMenu.classList.remove('catslider');
+			bodyEl.classList.remove('lock');
+		});
+	}
+    /*закрывает карточки категорий по клику на кнопку НАЗАД */
+	if (closeCategoryList.length > 0) {
+		for (let item of closeCategoryList){
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				item.closest('.catalog-menu-submenu').classList.remove('active');
+			
+			});
+		}
+		
+	}
 	$(function(){
 			const card = $('.possibl-card');
 			

@@ -1,8 +1,36 @@
+button:focus{outline: none;}
 .header-catalogy-wrapper.catslider{
 	background-color: #fff;
+	top:0;
 	.catalog-mobile-header{
-		display: block;
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding-left: 35px;
+		border-bottom: 1px solid #EBEBEB;
+		height: 80px;
+		background: linear-gradient(0deg, #F8F8F8 0%, #F8F8F8 100%), #FFF;
+		.catalog-title{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 20px;
+			font-weight: 600;
+		}
+		button{
+			display: flex;
+			column-gap:6px;
+			align-items:center;
+			height: 60px;
+			color: #2e2e2e;
+			font-size: 16px;
+			font-weight: 600;
+			transition:.3s;
+			&:hover{opacity: .7;}
+		}
 	}
+		
 	.header-catalogy .catalog-menu-drop {
 		width: 100%;
 	}
@@ -10,6 +38,23 @@
 		display: none;
 	}
 	.header-catalogy .catalog-menu-submenu {
-		border-left: 0;
+		border-left: 0; padding-top: 0;
+	}
+	.header-catalogy{
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+	}
+	.catalog-menu-submenu{transition: .5s;left: 120%; display: block !important;}
+	.catalog-menu-submenu.active{
+		left: 0;
+		
+		width: 100%;
+		position: fixed;
+		background-color: #fff;
+		z-index: 5 !important;
+		height: 100%;
+		
+			
 	}
 }

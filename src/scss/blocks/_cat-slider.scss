@@ -1,4 +1,5 @@
 button:focus{outline: none;}
+.header-catalogy-wrapper.catslider.top-offset{top: 0;}
 .header-catalogy-wrapper.catslider{
 	background-color: #fff;
 	top:0;
@@ -10,13 +11,23 @@ button:focus{outline: none;}
 		border-bottom: 1px solid #EBEBEB;
 		height: 80px;
 		background: linear-gradient(0deg, #F8F8F8 0%, #F8F8F8 100%), #FFF;
+		@media (max-width: 767px) {
+		padding-left: 20px;
+		column-gap: 25px;
+		}
 		.catalog-title{
 			position: absolute;
-			top: 50%;
+			top: 48%;
 			left: 50%;
+			
 			transform: translate(-50%, -50%);
 			font-size: 20px;
 			font-weight: 600;
+			@media (max-width: 767px) {
+			   font-size: 18px;
+			   position: static;
+			   transform: translate(0, 0);
+			}
 		}
 		button{
 			display: flex;
@@ -28,6 +39,13 @@ button:focus{outline: none;}
 			font-weight: 600;
 			transition:.3s;
 			&:hover{opacity: .7;}
+			@media (max-width: 767px) {
+			  width: 40px;
+			  height: 40px;
+			  border:1px solid #ebebeb;
+			  justify-content: center;
+			  span{display: none;}
+			}
 		}
 	}
 		
@@ -39,6 +57,9 @@ button:focus{outline: none;}
 	}
 	.header-catalogy .catalog-menu-submenu {
 		border-left: 0; padding-top: 0;
+		.scroll-y{
+			height:calc(100vh - 80px);
+		}
 	}
 	.header-catalogy{
 		width: 100%;

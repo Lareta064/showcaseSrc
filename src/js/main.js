@@ -8,7 +8,9 @@ $(document).ready(function () {
 	const closeCatSlider = document.querySelector('.close-catslider');
 	const closeCategoryList = document.querySelectorAll('.close-slide');
 
-	
+	if(window.innerWidth < 1200){
+		headerCatMenu.classList.add('catslider');
+	}
 	
 	/* показать кат меню по клику на кнопку Каталог Сайтов */
 	if (catMenuBtns.length > 0) {
@@ -17,16 +19,20 @@ $(document).ready(function () {
 			item.addEventListener('click', function () {
 				if (!item.classList.contains('active')) {
 
-					for (let i = 0; i < catMenuBtns.length; i++) catMenuBtns[i].classList.add('active');
-					headerCatMenu.classList.add('active');
-					bodyEl.classList.add('lock');
+					for (let i = 0; i < catMenuBtns.length; i++){ 
+						catMenuBtns[i].classList.add('active');
+						headerCatMenu.classList.add('active');
+						bodyEl.classList.add('lock');
+					}
 
 				} else {
-					for (let i = 0; i < catMenuBtns.length; i++) catMenuBtns[i].classList.remove('active');
-					headerCatMenu.classList.remove('active');
-					bodyEl.classList.remove('lock');
+					for (let i = 0; i < catMenuBtns.length; i++){
+						catMenuBtns[i].classList.remove('active');
+						headerCatMenu.classList.remove('active');
+						bodyEl.classList.remove('lock');
+					}
 				}
-			})
+			});
 		}
 	}
 	/* показать кат меню по клику пункт меню в модальном меню*/
@@ -62,8 +68,16 @@ $(document).ready(function () {
 			e.preventDefault();
 			e.stopPropagation();
 			headerCatMenu.classList.remove('active');
-			headerCatMenu.classList.remove('catslider');
-			bodyEl.classList.remove('lock');
+			if (window.innerWidth >= 1200){headerCatMenu.classList.remove('catslider');}
+			
+			if(window.innerWidth <1200){
+				for (let i = 0; i < catMenuBtns.length; i++) {
+					catMenuBtns[i].classList.remove('active');
+					
+				}
+				bodyEl.classList.remove('lock');
+			}
+			
 		});
 	}
     /*закрывает карточки категорий по клику на кнопку НАЗАД */

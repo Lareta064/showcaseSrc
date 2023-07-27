@@ -4,6 +4,9 @@ $(document).ready(function () {
 	const catMenuBtns = document.querySelectorAll('.catalogy-btn-desktop');
 	const headerCatMenu = document.getElementById('header-catalogy');
 	const catalogyCategory = document.querySelectorAll('.catalogy-category');
+	
+	
+	/* показать кат меню по клику на кнопку Каталог Сайтов */
 	if (catMenuBtns.length > 0) {
 
 		for (let item of catMenuBtns) {
@@ -22,6 +25,7 @@ $(document).ready(function () {
 			})
 		}
 	}
+	/*  показать подменю в виде отдельной страницы с кнопкой Назад */
 	if (catalogyCategory.length > 0){
 		const catalogyList = headerCatMenu.querySelectorAll('.catalog-menu-submenu');
 		for(let item of catalogyCategory){

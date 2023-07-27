@@ -4,7 +4,7 @@ $(document).ready(function () {
 	const catMenuBtns = document.querySelectorAll('.catalogy-btn-desktop');
 	const headerCatMenu = document.getElementById('header-catalogy');
 	const catalogyCategory = document.querySelectorAll('.catalogy-category');
-	
+	const showCatSlider = document.querySelectorAll('.show-catslider');
 	
 	/* показать кат меню по клику на кнопку Каталог Сайтов */
 	if (catMenuBtns.length > 0) {
@@ -22,6 +22,17 @@ $(document).ready(function () {
 					headerCatMenu.classList.remove('active');
 					bodyEl.classList.remove('lock');
 				}
+			})
+		}
+	}
+	/* показать кат меню по клику пункт меню в модальном меню*/
+	if (showCatSlider.length > 0) {
+		for (let item of showCatSlider){
+			item.addEventListener('click', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				headerCatMenu.classList.add('active');
+				headerCatMenu.classList.add('catslider');
 			})
 		}
 	}

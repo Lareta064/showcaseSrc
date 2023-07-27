@@ -1,0 +1,15 @@
+.header-catalogy-wrapper.catslider{
+	background-color: #fff;
+	.catalog-mobile-header{
+		display: block;
+	}
+	.header-catalogy .catalog-menu-drop {
+		width: 100%;
+	}
+	.catalog-menu-drop li:first-child .catalog-menu-submenu {
+		display: none;
+	}
+	.header-catalogy .catalog-menu-submenu {
+		border-left: 0;
+	}
+}

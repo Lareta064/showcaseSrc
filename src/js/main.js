@@ -3,6 +3,7 @@ $(document).ready(function () {
 	const bodyEl = document.querySelector('body');
 	const catMenuBtns = document.querySelectorAll('.catalogy-btn-desktop');
 	const headerCatMenu = document.getElementById('header-catalogy');
+	const catalogyCategory = document.querySelectorAll('.catalogy-category');
 	if (catMenuBtns.length > 0) {
 
 		for (let item of catMenuBtns) {
@@ -21,7 +22,19 @@ $(document).ready(function () {
 			})
 		}
 	}
-		
+	if (catalogyCategory.length > 0){
+		const catalogyList = headerCatMenu.querySelectorAll('.catalog-menu-submenu');
+		for(let item of catalogyCategory){
+			const itemList = item.querySelector('.catalog-menu-submenu');
+			item.addEventListener('click', function(){
+				for (let i = 0; i < catalogyList.length; i++){
+					catalogyList[i].classList.remove('active');
+					
+				}
+				item.querySelector('.catalog-menu-submenu').classList.add('active');
+			})
+		}
+	}	
 	
 	$(function(){
 			const card = $('.possibl-card');

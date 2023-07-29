@@ -7,12 +7,38 @@ mixin liItem(img, title)
 mixin tag(text)
 	a(href="#!").tag-label # !{text}
 		
-
+mixin product-card(img, title, pr1, pr2,...tags)
+	//===== одна карточка ===========
+	.product-card
+		.product-card__img
+			img(src="./img/categories-img/"+img+"-poster.png", alt="img")
+		.product-card__info
+			a(href='#!').product-card__title !{title}
+		
+			.price-medium
+				.price-new #{pr1} 000 руб
+				.price-old #{pr2} 000 руб
+			
+			.product-card__btns
+				a.btn-flex.btn--blue(href='#!')
+					span Демо
+					.demo-icon
+				
+				a.btn-flex(href='#!')
+					span Подробнее
+					svg(xmlns='http://www.w3.org/2000/svg' width='11' height='14' viewBox='0 0 11 14' fill='none')
+						path(d='M11 7L0.5 13.0622V0.937822L11 7Z')
+			.tags-wrapper
+				each item in tags
+					+tag(''+ item)
+				
 section.products
 	.container-xxl
 		+titleGroup('Наши сайты','Наши сайты', 'Делаем лучшее')
-		// БЛОК из 6 карточек
+		
+		//===== контент в две колонки ==========
 		.column-grid
+			//====левая колонка с меню категорий ====
 			.product-tabs-menu
 				.product-tabs-title 
 					p Каталог решений
@@ -32,13 +58,54 @@ section.products
 					+tag('Адаптивный')
 					+tag('Каталог')
 
+			//===правая колонка ===========
 			.column-grid__column
-			
-				.product-search
-					.form-item
-						input(type="text" placeholder="Найти решения")
-				
-				.product-tabs-content
+				//====форма поиска =========
+				form(action="") 
+					.product-search
+						.form-item
+							input(type="text" placeholder="Найти решения")
+							button.search-btn
+								.search-icon
 
+				.product-tabs-content
+					//==== фильтры ======
+					.products-sort
+						p Сортировать по:
+						.filters-group
+							label.filter-label
+								input(type="checkbox" name="sort_price")
+								.filter-label__text
+									span Цене
+									span.bg-arrow
+							
+							label.filter-label
+								input(type="checkbox" name="sort_date")
+								.filter-label__text
+									span Дате добавления
+									span.bg-arrow
+							
+							label.filter-label
+								input(type="checkbox" name="sort_populare")
+								.filter-label__text
+									span Популярности
+									span.bg-arrow
+					
+					//======= карточки сайтов ============
 					.products-cards
-						.product-card
+						
+						+product-card('pizza', 'Готовый сайт пицца и&nbsp;роллы', '9', '40','Корпоративный','Адаптивный')
+						
+						+product-card('foto', 'Готовый сайт фотографа', '5', '30','Персональный','Адаптивный')
+						
+						+product-card('cveti', 'Готовый сайт доставки цветов', '6', '50','Магазин','Адаптивный','Каталог')
+						
+						+product-card('urist1', 'Готовый сайт для юристов и адвокатов', '9', '40','Корпоративный','Адаптивный')
+
+						+product-card('product', 'Готовый сайт доставки продуктов', '6', '45','Магазин','Адаптивный','Каталог')
+
+						+product-card('urist2', 'Готовый юридически	 сайт', '9', '40','Корпоративный','Адаптивный')
+						
+						+product-card('dostavkai', 'Готовый сайт доставки обедов', '12', '40','Магазин','Адаптивный','Каталог')
+						
+						+product-card('dostavka2', 'Готовый сайт доставки роллов', '9', '40','Магазин','Адаптивный','Каталог')

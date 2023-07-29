@@ -1,4 +1,50 @@
 $(document).ready(function () {
+	/* продукты табы */
+	const tabMenu = document.querySelector('.product-tabs-list');
+	if (tabMenu) {
+		tabContent = document.querySelectorAll('[data-content]');
+		tabCat = document.querySelectorAll('[data-tab]');
+		const tabMenuShow = document.querySelector('#tabMenuBtn');
+		for (let item of tabCat){
+			
+			item.addEventListener('click',function(){
+				
+				for (let i = 0; i < tabCat.length; i++){
+					tabCat[i].classList.remove('active');
+					const itemData = item.getAttribute('data-tab');
+					item.classList.add('active');
+				
+					for (let j = 0; j < tabContent.length; j++) {
+					tabContent[j].classList.remove('active');
+					
+					const ContentData = tabContent[j].getAttribute('data-content');
+					if (itemData == ContentData){
+						tabContent[j].classList.add('active');
+					}
+				}
+				
+				
+			}
+			})
+		}
+		if(window.innerWidth < 1200){
+			tabMenuShow.addEventListener('click', function(){
+				if (!tabMenu.classList.contains('active')){
+					tabMenu.classList.add('active');
+					this.classList.add('active');
+				}else{
+					tabMenu.classList.remove('active');
+					this.classList.remove('active');
+				}
+				
+			});
+			tabMenu.addEventListener('click', function(e){
+				e.stopPropagation();
+				tabMenuShow.classList.remove('active');
+				this.classList.remove('active');
+			})
+		}
+	}
 	/*  header category menu*/
 	const bodyEl = document.querySelector('body');
 	const catMenuBtns = document.querySelectorAll('.catalogy-btn-desktop');
@@ -460,4 +506,6 @@ $(document).ready(function () {
 		document.querySelector('#transform-block').classList.remove('transform-block--hide');
 		document.querySelector('#hide-deskription').classList.remove('editor-text--visible');
 	});
+
+
 })

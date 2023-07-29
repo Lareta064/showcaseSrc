@@ -1,5 +1,5 @@
 mixin liItem(img, title, tab)
-	li(data-tab=""+ tab)
+	li(data-tab=""+ tab)&attributes(attributes)
 		.cat-img
 			img(src="./img/categories-img/"+ img+".png", alt="")
 		.cat-title #{title}
@@ -40,10 +40,11 @@ section.products
 		.column-grid
 			//====левая колонка с меню категорий ====
 			.product-tabs-menu
-				.product-tabs-title 
+				.product-tabs-title(id="tabMenuBtn")
 					p Каталог решений
+					span.icon-chevron
 				ul.product-tabs-list
-					+liItem('mebel', 'Мебель', 1)
+					+liItem('mebel', 'Мебель', 1)(class="active")
 					+liItem('foto', 'Фотография', 2)
 					+liItem('cveti', 'Цветы', 3)
 					+liItem('urist', 'Юриспруденция', 4)
@@ -94,7 +95,7 @@ section.products
 					//======= карточки сайтов, разбиты на блоки products-cards. По клику на строчку меню product-tabs-list отображаются за счет совпадения значений дата-атрибутов ============
 					
 					//======контент вкладки сайт мебели =====
-					.products-cards(data-content="1")
+					.products-cards.active(data-content="1")
 						
 						+product-card('pizza', 'Готовый сайт пицца и&nbsp;роллы', '9', '40','Корпоративный','Адаптивный')
 						

@@ -1,0 +1,44 @@
+mixin liItem(img, title)
+	li
+		.cat-img
+			img(src="./img/categories-img/"+ img+".png", alt="")
+		.cat-title #{title}
+
+mixin tag(text)
+	a(href="#!").tag-label # !{text}
+		
+
+section.products
+	.container-xxl
+		+titleGroup('Наши сайты','Наши сайты', 'Делаем лучшее')
+		// БЛОК из 6 карточек
+		.column-grid
+			.product-tabs-menu
+				.product-tabs-title 
+					p Каталог решений
+				ul.product-tabs-list
+					+liItem('mebel', 'Мебель')
+					+liItem('foto', 'Фотография')
+					+liItem('cveti', 'Цветы')
+					+liItem('urist', 'Юриспруденция')
+					+liItem('perevozki', 'Перевозки')
+					+liItem('product', 'Продукты питания')
+					+liItem('dostavka', 'Доставка')
+			
+				.tags-wrapper
+					+tag('Магазин')
+					+tag('Персональный')
+					+tag('Корпоративный')
+					+tag('Адаптивный')
+					+tag('Каталог')
+
+			.column-grid__column
+			
+				.product-search
+					.form-item
+						input(type="text" placeholder="Найти решения")
+				
+				.product-tabs-content
+
+					.products-cards
+						.product-card

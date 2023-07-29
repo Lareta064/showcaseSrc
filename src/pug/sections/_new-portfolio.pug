@@ -1,5 +1,5 @@
-mixin liItem(img, title)
-	li
+mixin liItem(img, title, tab)
+	li(data-tab=""+ tab)
 		.cat-img
 			img(src="./img/categories-img/"+ img+".png", alt="")
 		.cat-title #{title}
@@ -43,13 +43,13 @@ section.products
 				.product-tabs-title 
 					p Каталог решений
 				ul.product-tabs-list
-					+liItem('mebel', 'Мебель')
-					+liItem('foto', 'Фотография')
-					+liItem('cveti', 'Цветы')
-					+liItem('urist', 'Юриспруденция')
-					+liItem('perevozki', 'Перевозки')
-					+liItem('product', 'Продукты питания')
-					+liItem('dostavka', 'Доставка')
+					+liItem('mebel', 'Мебель', 1)
+					+liItem('foto', 'Фотография', 2)
+					+liItem('cveti', 'Цветы', 3)
+					+liItem('urist', 'Юриспруденция', 4)
+					+liItem('perevozki', 'Перевозки', 5)
+					+liItem('product', 'Продукты питания', 6)
+					+liItem('dostavka', 'Доставка', 7)
 			
 				.tags-wrapper
 					+tag('Магазин')
@@ -74,25 +74,27 @@ section.products
 						p Сортировать по:
 						.filters-group
 							label.filter-label
-								input(type="checkbox" name="sort_price")
+								input(type="radio" name="sort_products")
 								.filter-label__text
 									span Цене
 									span.bg-arrow
 							
 							label.filter-label
-								input(type="checkbox" name="sort_date")
+								input(type="radio" name="sort_products")
 								.filter-label__text
 									span Дате добавления
 									span.bg-arrow
 							
 							label.filter-label
-								input(type="checkbox" name="sort_populare")
+								input(type="radio" name="sort_products")
 								.filter-label__text
 									span Популярности
 									span.bg-arrow
 					
-					//======= карточки сайтов ============
-					.products-cards
+					//======= карточки сайтов, разбиты на блоки products-cards. По клику на строчку меню product-tabs-list отображаются за счет совпадения значений дата-атрибутов ============
+					
+					//======контент вкладки сайт мебели =====
+					.products-cards(data-content="1")
 						
 						+product-card('pizza', 'Готовый сайт пицца и&nbsp;роллы', '9', '40','Корпоративный','Адаптивный')
 						
@@ -109,3 +111,23 @@ section.products
 						+product-card('dostavkai', 'Готовый сайт доставки обедов', '12', '40','Магазин','Адаптивный','Каталог')
 						
 						+product-card('dostavka2', 'Готовый сайт доставки роллов', '9', '40','Магазин','Адаптивный','Каталог')
+
+					//======контент вкладки сайт фотографа =====
+					.products-cards(data-content="2")
+						
+						+product-card('foto', 'Готовый сайт фотографа', '5', '30','Персональный','Адаптивный')
+						+product-card('product', 'Готовый сайт доставки продуктов', '6', '45','Магазин','Адаптивный','Каталог')
+					
+					//======контент вкладки сайт цветы =====
+					.products-cards(data-content="3")
+						+product-card('cveti', 'Готовый сайт доставки цветов', '6', '50','Магазин','Адаптивный','Каталог')
+						
+						+product-card('urist1', 'Готовый сайт для юристов и адвокатов', '9', '40','Корпоративный','Адаптивный')
+
+						+product-card('urist2', 'Готовый юридически	 сайт', '9', '40','Корпоративный','Адаптивный')
+						
+						
+					//======контент вкладки сайт Юристы =====
+					.products-cards(data-content="3")
+						+product-card('urist1', 'Готовый сайт для юристов и адвокатов', '9', '40','Корпоративный','Адаптивный')
+						+product-card('urist2', 'Готовый юридически	 сайт', '9', '40','Корпоративный','Адаптивный')

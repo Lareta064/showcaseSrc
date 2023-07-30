@@ -1,3 +1,4 @@
+/*==================NEW PORTFOLIO ====================*/
 .container-xxl{
 	width: 1770px;
 	padding-left: 15px;
@@ -41,18 +42,23 @@
 	background: #F2F2EA;
 	
 	@media (max-width: 1199px) {
-	   padding-top: 60px;
+	   padding-top: 33px;
 	   padding-bottom: 65px;overflow: hidden;
 	}
 	.back-title{
 		color:#F5F5F5;
+		
+		@media (max-width: 767px) {
+			line-height: 1;
+			.text-16{bottom:-13px;}
+		}
 		
 		
 	}
 	.title-group{
 		margin-bottom: 90px;
 		@media (max-width: 767px) {
-		   margin-bottom: 40px;
+		   margin-bottom: 53px;
 		}
 	}
 	.product-tabs-title{
@@ -296,6 +302,10 @@
 		font-size: 20px;
 		min-height: 48px;;
 		}
+		@media (max-width: 767px) {
+		  min-height: unset;
+		 
+		}
 		
 	}
 	&__btns{
@@ -418,4 +428,9 @@
 			}
 	}
 }
-.product-tabs-content{padding-top: 53px;}
+.product-tabs-content{padding-top: 53px;
+	@media (max-width: 1199px) {
+	padding-top: 20px;
+	}
+}
+/*================== END EW PORTFOLIO ====================*/

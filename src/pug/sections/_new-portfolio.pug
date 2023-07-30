@@ -1,7 +1,7 @@
 mixin liItem(img, title, tab)
 	li(data-tab=""+ tab)&attributes(attributes)
 		.cat-img
-			img(src="./img/categories-img/"+ img+".png", alt="")
+			img(src="/assets/template/img/categories-img/"+ img+".png", alt="")
 		.cat-title #{title}
 
 mixin tag(text)
@@ -11,7 +11,7 @@ mixin product-card(img, title, pr1, pr2,...tags)
 	//===== одна карточка ===========
 	.product-card
 		.product-card__img
-			img(src="./img/categories-img/"+img+"-poster.png", alt="img")
+			img(src="/assets/template/img/categories-img/"+img+"-poster.png", alt="img")
 		.product-card__info
 			a(href='#!').product-card__title !{title}
 		
@@ -129,6 +129,6 @@ section.products
 						
 						
 					//======контент вкладки сайт Юристы =====
-					.products-cards(data-content="3")
+					.products-cards(data-content="4")
 						+product-card('urist1', 'Готовый сайт для юристов и адвокатов', '9', '40','Корпоративный','Адаптивный')
 						+product-card('urist2', 'Готовый юридически	 сайт', '9', '40','Корпоративный','Адаптивный')

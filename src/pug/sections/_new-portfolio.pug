@@ -1,8 +1,8 @@
 mixin liItem(img, title, tab)
 	li(data-tab=""+ tab)&attributes(attributes)
-		.cat-img
+		a(href="#product-tabs-menu")
 			img(src="/assets/template/img/categories-img/"+ img+".png", alt="")
-		.cat-title #{title}
+			.cat-title #{title}
 
 mixin tag(text)
 	a(href="#!").tag-label # !{text}
@@ -39,7 +39,7 @@ section.products
 		//===== контент в две колонки ==========
 		.column-grid
 			//====левая колонка с меню категорий ====
-			.product-tabs-menu
+			.product-tabs-menu#product-tabs-menu
 				.product-tabs-title(id="tabMenuBtn")
 					p Каталог решений
 					span.icon-chevron
